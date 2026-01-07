@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Deep Dive | Ashley Love</title>
+    <style>
+        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
+        header { background: var(--primary); color: var(--white); padding: 40px 20px; text-align: center; }
+        nav { background: var(--white); padding: 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
+        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .highlight-box { background: #f1f5f9; border-left: 6px solid var(--accent); padding: 20px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; }
+        th { background: #f8fafc; }
+    </style>
+</head>
+<body>
+    <header><h1>Financial Fraud Detection</h1></header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="highlight-box">
+            <strong>Business Impact:</strong> Identified 92% of fraudulent transactions using Isolation Forest algorithms, reducing potential annual loss by an estimated 15%.
+        </div>
+        <h2>Technical Methodology</h2>
+        <p>Using Python and Scikit-learn, I implemented an anomaly detection approach to identify suspicious financial activity without the need for labeled historical fraud data.</p>
+        <table>
+            <tr><th>Metric</th><th>Score</th></tr>
+            <tr><td>Fraud Detection Rate (Recall)</td><td>92.0%</td></tr>
+            <tr><td>False Positive Rate</td><td>2.1%</td></tr>
+        </table>
+    </div>
+</body>
+</html>
