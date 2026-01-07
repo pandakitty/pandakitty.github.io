@@ -12,6 +12,8 @@
         nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
         .container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
         .highlight-box { background: #f1f5f9; border-left: 6px solid var(--accent); padding: 20px; margin: 20px 0; }
+        h2 { color: var(--primary); margin-top: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 5px; }
+        .tag { background: #e2e8f0; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 5px; }
     </style>
 </head>
 <body>
@@ -26,8 +28,25 @@
         <div class="highlight-box">
             <strong>Key Achievement:</strong> Designed a 7-table relational schema to track Customer Lifetime Value (CLV) and inventory turnover.
         </div>
+
+        <p>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Database Design</span>
+            <span class="tag">ETL Pipeline</span>
+        </p>
+
         <h2>Technical Summary</h2>
-        <p>I utilized advanced SQL techniques including primary/foreign key relationships and complex joins to ensure data integrity—applying a clinical-grade precision to retail data sets.</p>
-            </div>
+        <p>I utilized advanced SQL techniques, including primary/foreign key relationships and complex joins to ensure data integrity—applying a clinical-grade precision to retail data sets.</p>
+
+        <h2>The "What": Technical Methodology</h2>
+        <p>I architected a 3rd Normal Form (3NF) relational database using PostgreSQL. This involved mapping out an Entity Relationship Diagram (ERD) to eliminate data redundancy across seven core tables: Customers, Orders, Products, Categories, Suppliers, Inventory, and Order_Items. By implementing referential integrity constraints and optimized indexing, I created a system capable of handling complex analytical queries, such as calculating month-over-month growth and individual Customer Lifetime Value via SQL window functions.</p>
+
+        
+
+        <h2>The "Why": Data Science Impact</h2>
+        <p>Data Science is only as effective as the infrastructure that supports it. This project proves my ability to provide "end-to-end visibility" into the data lifecycle. By building a robust relational model, I ensure that the data fed into predictive models is accurate, structured, and consistent. In a business context, this architecture provides a single source of truth, enabling executives to make real-time decisions regarding inventory management and high-value customer retention strategies.</p>
+
+        <a href="index.html" style="display: inline-block; margin-top: 30px; color: var(--accent); text-decoration: none; font-weight: bold;">← Back to Portfolio Dashboard</a>
+    </div>
 </body>
 </html>
