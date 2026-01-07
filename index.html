@@ -44,7 +44,7 @@
         .header-text h1 { margin: 0; font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
         .subtitle { font-size: 1.1rem; color: #cbd5e0; margin-top: 5px; font-weight: 300; }
 
-        /* Navigation */
+        /* Navigation Bar */
         nav { 
             background: var(--white); 
             padding: 1rem; 
@@ -67,7 +67,7 @@
 
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 
-        /* Section Styling */
+        /* Content Sections */
         section { 
             background: var(--white); 
             padding: 40px; 
@@ -78,7 +78,7 @@
 
         h2 { font-size: 1.75rem; color: var(--primary); margin-top: 0; border-left: 5px solid var(--accent); padding-left: 15px; }
 
-        /* Career Reflection Box */
+        /* Career Reflection Block */
         .reflection-quote {
             background: #f1f5f9;
             border-left: 6px solid var(--accent);
@@ -89,7 +89,7 @@
             color: #475569;
         }
 
-        /* Skill Pills */
+        /* Skills Badges */
         .skill-pill {
             display: inline-block;
             background: #e2e8f0;
@@ -101,7 +101,7 @@
             margin: 4px;
         }
 
-        /* Project Grid */
+        /* Project Display Grid */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         
         .project-card { 
@@ -130,7 +130,7 @@
             font-weight: 700;
         }
 
-        /* Mobile Adjustment */
+        /* Mobile Viewport Fix */
         @media (max-width: 600px) {
             header { flex-direction: column; text-align: center; }
         }
@@ -141,7 +141,7 @@
 <body>
 
 <header>
-    <img src="profile.png" alt="Ashley Love" class="profile-img">
+    <img src="github_photo.jpg" alt="Ashley Love" class="profile-img">
     <div class="header-text">
         <h1>Ashley Love</h1>
         <p class="subtitle">DATA SCIENTIST | BUSINESS ANALYTICS SPECIALIST</p>
@@ -153,11 +153,11 @@
     <a href="about.md">About</a>
     <a href="projects.md">Work</a>
     <a href="contact.md">Contact</a>
-    <a href="./files/Ashley_Love_Resume.pdf" target="_blank" style="color: var(--accent);">Resume PDF</a>
+    <a href="./files/Ashley_Love_Resume.pdf" target="_blank" style="color: var(--accent);">Resume (PDF)</a>
 </nav>
 
 <div class="container">
-    <section>
+    <section id="summary">
         <h2>Professional Summary</h2>
         <p>Highly analytical junior pursuing concurrent degrees in Data Science and Business Analytics. I offer 5 years of Python experience and advanced SQL proficiency, specializing in translating complex healthcare data into actionable business intelligence.</p>
         
@@ -166,17 +166,16 @@
         </div>
 
         <div>
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">SQL</span>
-            <span class="skill-pill">TensorFlow</span>
-            <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">Python (5 yrs)</span>
+            <span class="skill-pill">SQL (3+ yrs)</span>
+            <span class="skill-pill">Machine Learning</span>
+            <span class="skill-pill">Predictive Modeling</span>
             <span class="skill-pill">Epic/Cerner</span>
             <span class="skill-pill">Tableau</span>
-            <span class="skill-pill">EDA</span>
         </div>
     </section>
 
-    <section>
+    <section id="work">
         <h2>Featured Project Deep Dives</h2>
         <div class="project-grid">
             <div class="project-card">
@@ -209,7 +208,7 @@
 </div>
 
 <footer>
-    &copy; 2026 Ashley Love | Rancho Palos Verdes, CA
+    &copy; 2026 Ashley Love | Rancho Palos Verdes, CA | Built with HTML/CSS
 </footer>
 
 </body>
