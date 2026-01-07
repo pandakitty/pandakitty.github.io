@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Ashley Love</title>
+    <style>
+        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
+        header { background: var(--primary); color: var(--white); padding: 40px 20px; display: flex; align-items: center; justify-content: center; gap: 20px; }
+        .profile-img { width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--accent); object-fit: cover; }
+        nav { background: var(--white); padding: 1rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        h2 { border-left: 5px solid var(--accent); padding-left: 15px; color: var(--primary); }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
+        .project-card { background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #edf2f7; }
+        .btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="github_photo.jpg" alt="Ashley Love" class="profile-img">
+        <h1>Technical Projects</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Fraud Detection</h3>
+                <p>Isolation Forest model identifying 92% of fraudulent financial transactions.</p>
+                <a href="fraud-detection.html" class="btn">View Methodology</a>
+            </div>
+            <div class="project-card">
+                <h3>Sentiment Analysis (LSTM)</h3>
+                <p>Neural Network achieving 88% F1 Score on unstructured review data.</p>
+                <a href="lstm-sentiment.html" class="btn">View Methodology</a>
+            </div>
+            <div class="project-card">
+                <h3>Retail DB Architecture</h3>
+                <p>Relational schema design for complex Customer Lifetime Value analysis.</p>
+                <a href="sql-database-modeling.html" class="btn">View Methodology</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
