@@ -10,10 +10,11 @@
         h1 { margin-bottom: 5px; }
         .subtitle { font-weight: bold; color: #2c3e50; }
         .project-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f4f4f4; }
         nav a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #2c3e50; }
+        .edu-item { margin-bottom: 15px; }
     </style>
 </head>
 <body>
@@ -37,9 +38,9 @@
     <section id="summary">
         <h2>Professional Summary</h2>
         <p>
-            Highly analytical and results-driven junior pursuing concurrent degrees in **Data Science** and **Business Analytics**[cite: 7]. 
-            I offer 5 years of programming experience in **Python** and advanced proficiency in **SQL**[cite: 7]. 
-            With a background in high-stakes healthcare environments, I specialize in translating complex information into actionable insights[cite: 8, 9].
+            [cite_start]Highly analytical and results-driven junior pursuing concurrent degrees in **Data Science** and **Business Analytics**[cite: 7]. 
+            [cite_start]I offer 5 years of programming experience in **Python** and advanced proficiency in **SQL**[cite: 7, 11]. 
+            [cite_start]With domain expertise gained from years in high-stakes healthcare environments, I specialize in translating complex data into actionable insights[cite: 8, 9].
         </p>
     </section>
 
@@ -52,36 +53,34 @@
             </tr>
             <tr>
                 <td>Programming</td>
-                <td>Python (5 years), SQL (3+ Years), HTML/CSS </td>
+                [cite_start]<td>Python (5 years), SQL (3+ Years), HTML/CSS [cite: 11]</td>
             </tr>
             <tr>
                 <td>Data Science Libraries</td>
-                <td>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn </td>
-            </tr>
-            <tr>
-                <td>Data Visualization & BI</td>
-                <td>Tableau, Microsoft Power BI (Conceptual), Excel (Advanced) </td>
+                [cite_start]<td>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn [cite: 11]</td>
             </tr>
             <tr>
                 <td>Databases & Systems</td>
-                <td>Epic, Cerner, NextGen, Relational Databases </td>
+                [cite_start]<td>Epic, Cerner, NextGen, Relational Databases [cite: 11]</td>
             </tr>
         </table>
     </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-card">
-            <h3>Predictive Sentiment Analysis (LSTM)</h3>
-            <p>Developed an LSTM Neural Network to predict sentiment category using unstructured text, achieving an 88% F1 Score[cite: 13].</p>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="edu-item">
+            <strong>Pursuing B.S. in Data Science</strong> | [cite_start]Bellevue University [cite: 15, 16] <br>
+            [cite_start]<em>Expected Graduation: March 2026</em> [cite: 17] <br>
+            [cite_start]Relevant Coursework: Probability & Statistics, Data Mining, Predictive Modeling, Advanced Python [cite: 18]
         </div>
-        <div class="project-card">
-            <h3>Financial Fraud Detection</h3>
-            <p>Implemented an Isolation Forest model on financial data to identify 92% of fraudulent transactions[cite: 13].</p>
+        <div class="edu-item">
+            <strong>Pursuing B.S. in Business Analytics</strong> | [cite_start]Bellevue University [cite: 19, 20] <br>
+            [cite_start]<em>Expected Graduation: Fall 2026</em> [cite: 21]
         </div>
     </section>
 
     <footer>
+        <hr>
         <p>&copy; 2026 Ashley Love | Built with HTML/CSS</p>
     </footer>
 
