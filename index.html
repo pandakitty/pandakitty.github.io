@@ -3,98 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashley Love | Portfolio</title>
+    <title>Ashley Love | Data Science Portfolio</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
-        h1 { margin-bottom: 5px; }
-        .subtitle { font-weight: bold; color: #2c3e50; }
-        .project-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f4f4f4; }
-        nav a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #2c3e50; }
-        nav a:hover { color: #3498db; }
-        .highlight { background-color: #f9f9f9; padding: 15px; border-left: 5px solid #2c3e50; margin: 20px 0; }
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --bg: #f4f7f6;
+            --text: #333;
+            --white: #ffffff;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* Header & Nav */
+        header { background: var(--primary); color: var(--white); padding: 60px 0; text-align: center; border-bottom: 5px solid var(--accent); }
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        .subtitle { font-weight: 300; font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
+        nav { background: #fff; padding: 15px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: bold; color: var(--primary); transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        /* Sections */
+        section { background: var(--white); padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin-top: 0; }
+
+        /* Project Cards */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .project-card { border: 1px solid #eee; padding: 20px; border-radius: 10px; transition: transform 0.3s; background: #fafafa; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+        
+        /* Buttons */
+        .btn { display: inline-block; padding: 10px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; font-size: 0.9rem; }
+        .btn:hover { background: #2980b9; }
+
+        /* Skills Badges */
+        .badge { display: inline-block; background: #e1e8ed; color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; margin: 5px; font-weight: 600; }
+        
+        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Ashley Love</h1> 
-        <p class="subtitle">JUNIOR DATA SCIENTIST | BUSINESS ANALYTICS SPECIALIST</p> 
-        <p>Rancho Palos Verdes, CA | ashelove6969@gmail.com</p> 
-        <p>
-            <a href="https://www.linkedin.com/in/ashe-love/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/pandakitty" target="_blank">GitHub</a> |
-            <a href="./files/Ashley_Love_Resume.pdf" target="_blank">Resume (PDF)</a>
+        <h1>Ashley Love</h1>
+        <p class="subtitle">DATA SCIENTIST & BUSINESS ANALYTICS SPECIALIST</p>
+        <p style="margin-top:20px;">
+            <a href="https://linkedin.com/in/ashe-love/" style="color:white; margin:0 10px;">LinkedIn</a> | 
+            <a href="https://github.com/pandakitty" style="color:white; margin:0 10px;">GitHub</a>
         </p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.md">About</a>
-            <a href="projects.md">Work</a>
-            <a href="contact.md">Contact</a>
-        </nav>
     </header>
 
-    <section id="summary">
-        <h2>Professional Summary</h2>
-        <p>
-            Highly analytical and results-driven junior pursuing concurrent degrees in Data Science and Business Analytics. 
-            I offer 5 years of programming experience in Python and advanced proficiency in SQL. 
-            With a background in high-stakes healthcare environments (Epic, Cerner), I specialize in translating complex information into actionable insights.
-        </p>
-    </section>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.md">About</a>
+        <a href="projects.md">Projects</a>
+        <a href="contact.md">Contact</a>
+        <a href="./files/Ashley_Love_Resume.pdf" target="_blank" style="color: var(--accent);">Resume PDF</a>
+    </nav>
 
-    <div class="highlight">
-        <h3>Career Reflection</h3>
-        <p><em>"My journey is defined by a transition from high-stakes clinical data management to advanced predictive modeling. I apply the same 'zero-discrepancy' mindset learned in the NICU to modern business intelligence challenges."</em></p>
+    <div class="container">
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>Junior Data Scientist pursuing concurrent degrees at **Bellevue University**. I specialize in bridging the gap between high-stakes healthcare data and actionable business intelligence.</p>
+            <div>
+                <span class="badge">Python (5 Years)</span>
+                <span class="badge">SQL (3+ Years)</span>
+                <span class="badge">Machine Learning</span>
+                <span class="badge">Predictive Modeling</span>
+                <span class="badge">Tableau</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Sentiment Analysis</h3>
+                    <p>LSTM Neural Network achieving 88% F1 Score on unstructured text.</p>
+                    <a href="lstm-sentiment.md" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Fraud Detection</h3>
+                    <p>Anomaly detection identifying 92% of fraudulent transactions.</p>
+                    <a href="fraud-detection.md" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Retail DB Modeling</h3>
+                    <p>Architecture for CLV analysis across 7 relational tables.</p>
+                    <a href="sql-database-modeling.md" class="btn">View Project</a>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <section id="skills">
-        <h2>Technical Proficiencies</h2>
-        <table>
-            <tr>
-                <th>Category</th>
-                <th>Skills and Tools</th>
-            </tr>
-            <tr>
-                <td>Programming</td>
-                <td>Python (5 years), SQL (3+ Years), HTML/CSS</td>
-            </tr>
-            <tr>
-                <td>Data Science</td>
-                <td>LSTM Neural Networks, Anomaly Detection, RFM Analysis, EDA</td>
-            </tr>
-            <tr>
-                <td>Libraries</td>
-                <td>Pandas, NumPy, Scikit-learn, TensorFlow, Keras, Matplotlib, Seaborn</td>
-            </tr>
-        </table>
-    </section>
-
-    <section id="featured-work">
-        <h2>Featured Project Deep Dives</h2>
-        <div class="project-card">
-            <h3>Predictive Sentiment Analysis (LSTM)</h3>
-            <p>Achieved an 88% F1 Score using deep learning to classify text reviews.</p>
-            <a href="lstm-sentiment.md">View Methodology →</a>
-        </div>
-        <div class="project-card">
-            <h3>Financial Fraud Detection</h3>
-            <p>Identified 92% of fraudulent transactions using Isolation Forest algorithms.</p>
-            <a href="fraud-detection.md">View Methodology →</a>
-        </div>
-        <div class="project-card">
-            <h3>Retail Database & CLV Modeling</h3>
-            <p>Designed a 7-table relational database to calculate Customer Lifetime Value.</p>
-            <a href="sql-database-modeling.md">View Methodology →</a>
-        </div>
-    </section>
-
     <footer>
-        <hr>
-        <p>&copy; 2026 Ashley Love | Built with HTML/CSS</p>
+        &copy; 2026 Ashley Love | Rancho Palos Verdes, CA
     </footer>
 
 </body>
