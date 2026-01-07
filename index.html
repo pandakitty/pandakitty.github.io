@@ -9,12 +9,16 @@
         header { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
         h1 { margin-bottom: 5px; }
         .subtitle { font-weight: bold; color: #2c3e50; }
-        .project-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+        .project-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        nav a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #2c3e50; }
     </style>
 </head>
 <body>
 
- <header>
+    <header>
         <h1>Ashley Love</h1> 
         <p class="subtitle">JUNIOR DATA SCIENTIST | BUSINESS ANALYTICS SPECIALIST</p> 
         <p>Rancho Palos Verdes, CA | ashelove6969@gmail.com</p> 
@@ -22,39 +26,58 @@
             <a href="https://www.linkedin.com/in/ashe-love/">LinkedIn</a> | 
             <a href="https://github.com/pandakitty">GitHub</a>
         </p>
-        
-        <nav style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #eee;">
-            <a href="index.html" style="margin-right: 15px;">Home</a>
-            <a href="about.md" style="margin-right: 15px;">About</a>
-            <a href="projects.md" style="margin-right: 15px;">Work</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.md">About</a>
+            <a href="projects.md">Work</a>
             <a href="contact.md">Contact</a>
         </nav>
     </header>
+
     <section id="summary">
         <h2>Professional Summary</h2>
         <p>
-            Highly analytical and results-driven junior pursuing concurrent degrees in **Data Science** and **Business Analytics**. 
+            Highly analytical and results-driven junior pursuing concurrent degrees in **Data Science** and **Business Analytics**[cite: 7]. 
             I offer 5 years of programming experience in **Python** and advanced proficiency in **SQL**[cite: 7]. 
             With a background in high-stakes healthcare environments, I specialize in translating complex information into actionable insights[cite: 8, 9].
         </p>
     </section>
 
+    <section id="skills">
+        <h2>Technical Proficiencies</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Skills and Tools</th>
+            </tr>
+            <tr>
+                <td>Programming</td>
+                <td>Python (5 years), SQL (3+ Years), HTML/CSS </td>
+            </tr>
+            <tr>
+                <td>Data Science Libraries</td>
+                <td>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn </td>
+            </tr>
+            <tr>
+                <td>Data Visualization & BI</td>
+                <td>Tableau, Microsoft Power BI (Conceptual), Excel (Advanced) </td>
+            </tr>
+            <tr>
+                <td>Databases & Systems</td>
+                <td>Epic, Cerner, NextGen, Relational Databases </td>
+            </tr>
+        </table>
+    </section>
+
     <section id="projects">
         <h2>Featured Projects</h2>
-        
         <div class="project-card">
             <h3>Predictive Sentiment Analysis (LSTM)</h3>
-            <p>Developed an LSTM Neural Network to predict sentiment category using unstructured text, achieving an 88% F1 Score.</p>
+            <p>Developed an LSTM Neural Network to predict sentiment category using unstructured text, achieving an 88% F1 Score[cite: 13].</p>
         </div>
-
         <div class="project-card">
             <h3>Financial Fraud Detection</h3>
-            <p>Implemented an Isolation Forest model on financial data to identify 92% of fraudulent transactions.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Retail Database Modeling (SQL)</h3>
-            <p>Modeled a 7-table retail database to calculate quarterly Customer Lifetime Value (CLV).</p>
+            <p>Implemented an Isolation Forest model on financial data to identify 92% of fraudulent transactions[cite: 13].</p>
         </div>
     </section>
 
