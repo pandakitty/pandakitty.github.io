@@ -19,4 +19,4 @@ I implemented the **Isolation Forest** algorithm. Unlike traditional models that
 * **Precision:** Maintained a low false-positive rate, ensuring that the user experience for legitimate customers remained seamless.
 
 ### 5. Professional Application
-This project showcases my ability to "triage" data—identifying the most critical variables and outliers to protect business assets, a skill I honed while navigating multiple EMR systems like **Epic, Cerner, and NextGen** to coordinate urgent care[cite: 43].
+This project showcases my ability to "triage" data—identifying the most critical variables and outliers to protect business assets, a skill I honed while navigating multiple EMR systems like **Epic, Cerner, and NextGen** to coordinate urgent care.
