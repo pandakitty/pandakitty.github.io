@@ -6,99 +6,129 @@
     <title>Ashley Love | Data Science Portfolio</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --bg: #f4f7f6;
-            --text: #333;
+            --primary: #1a2a3a; /* Deep Navy */
+            --accent: #3498db;  /* Professional Blue */
+            --bg: #f8fafc;     /* Soft Grey-White */
+            --text: #2d3748;
             --white: #ffffff;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        
-        /* Header & Nav */
-        header { background: var(--primary); color: var(--white); padding: 60px 0; text-align: center; border-bottom: 5px solid var(--accent); }
-        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
-        .subtitle { font-weight: 300; font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
-        nav { background: #fff; padding: 15px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        nav a { margin: 0 15px; text-decoration: none; font-weight: bold; color: var(--primary); transition: 0.3s; }
+
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text); 
+            background-color: var(--bg); 
+            margin: 0; 
+        }
+
+        /* Header Section */
+        header { 
+            background: var(--primary); 
+            color: var(--white); 
+            padding: 60px 20px; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .header-text h1 { margin: 0; font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
+        .subtitle { font-size: 1.1rem; color: #cbd5e0; margin-top: 5px; font-weight: 300; }
+
+        /* Navigation */
+        nav { 
+            background: var(--white); 
+            padding: 1rem; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        nav a { 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            color: var(--primary); 
+            transition: color 0.2s;
+        }
+
         nav a:hover { color: var(--accent); }
 
-        /* Sections */
-        section { background: var(--white); padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin-top: 0; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 
-        /* Project Cards */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .project-card { border: 1px solid #eee; padding: 20px; border-radius: 10px; transition: transform 0.3s; background: #fafafa; }
-        .project-card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+        /* Section Styling */
+        section { 
+            background: var(--white); 
+            padding: 40px; 
+            border-radius: 12px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03); 
+        }
+
+        h2 { font-size: 1.75rem; color: var(--primary); margin-top: 0; border-left: 5px solid var(--accent); padding-left: 15px; }
+
+        /* Career Reflection Box */
+        .reflection-quote {
+            background: #f1f5f9;
+            border-left: 6px solid var(--accent);
+            padding: 25px;
+            font-style: italic;
+            border-radius: 4px;
+            margin: 20px 0;
+            color: #475569;
+        }
+
+        /* Skill Pills */
+        .skill-pill {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #1e293b;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 4px;
+        }
+
+        /* Project Grid */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         
-        /* Buttons */
-        .btn { display: inline-block; padding: 10px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; font-size: 0.9rem; }
-        .btn:hover { background: #2980b9; }
+        .project-card { 
+            border: 1px solid #edf2f7; 
+            padding: 25px; 
+            border-radius: 12px; 
+            background: #fff;
+            transition: all 0.3s ease;
+        }
 
-        /* Skills Badges */
-        .badge { display: inline-block; background: #e1e8ed; color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; margin: 5px; font-weight: 600; }
-        
-        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
-    </style>
-</head>
-<body>
+        .project-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08); 
+            border-color: var(--accent);
+        }
 
-    <header>
-        <h1>Ashley Love</h1>
-        <p class="subtitle">DATA SCIENTIST & BUSINESS ANALYTICS SPECIALIST</p>
-        <p style="margin-top:20px;">
-            <a href="https://linkedin.com/in/ashe-love/" style="color:white; margin:0 10px;">LinkedIn</a> | 
-            <a href="https://github.com/pandakitty" style="color:white; margin:0 10px;">GitHub</a>
-        </p>
-    </header>
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.md">About</a>
-        <a href="projects.md">Projects</a>
-        <a href="contact.md">Contact</a>
-        <a href="./files/Ashley_Love_Resume.pdf" target="_blank" style="color: var(--accent);">Resume PDF</a>
-    </nav>
-
-    <div class="container">
-        <section id="summary">
-            <h2>Professional Summary</h2>
-            <p>Junior Data Scientist pursuing concurrent degrees at **Bellevue University**. I specialize in bridging the gap between high-stakes healthcare data and actionable business intelligence.</p>
-            <div>
-                <span class="badge">Python (5 Years)</span>
-                <span class="badge">SQL (3+ Years)</span>
-                <span class="badge">Machine Learning</span>
-                <span class="badge">Predictive Modeling</span>
-                <span class="badge">Tableau</span>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Sentiment Analysis</h3>
-                    <p>LSTM Neural Network achieving 88% F1 Score on unstructured text.</p>
-                    <a href="lstm-sentiment.md" class="btn">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Fraud Detection</h3>
-                    <p>Anomaly detection identifying 92% of fraudulent transactions.</p>
-                    <a href="fraud-detection.md" class="btn">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Retail DB Modeling</h3>
-                    <p>Architecture for CLV analysis across 7 relational tables.</p>
-                    <a href="sql-database-modeling.md" class="btn">View Project</a>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        &copy; 2026 Ashley Love | Rancho Palos Verdes, CA
-    </footer>
-
-</body>
-</html>
+        /* Mobile Adjustment */
+        @media (max-width: 600px) {
