@@ -14,7 +14,8 @@
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f4f4f4; }
         nav a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #2c3e50; }
-        .edu-item { margin-bottom: 15px; }
+        nav a:hover { color: #3498db; }
+        .highlight { background-color: #f9f9f9; padding: 15px; border-left: 5px solid #2c3e50; margin: 20px 0; }
     </style>
 </head>
 <body>
@@ -24,8 +25,8 @@
         <p class="subtitle">JUNIOR DATA SCIENTIST | BUSINESS ANALYTICS SPECIALIST</p> 
         <p>Rancho Palos Verdes, CA | ashelove6969@gmail.com</p> 
         <p>
-            <a href="https://www.linkedin.com/in/ashe-love/">LinkedIn</a> | 
-            <a href="https://github.com/pandakitty">GitHub</a> |
+            <a href="https://www.linkedin.com/in/ashe-love/" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/pandakitty" target="_blank">GitHub</a> |
             <a href="./files/Ashley_Love_Resume.pdf" target="_blank">Resume (PDF)</a>
         </p>
         <nav>
@@ -39,11 +40,16 @@
     <section id="summary">
         <h2>Professional Summary</h2>
         <p>
-            [cite_start]Highly analytical and results-driven junior pursuing concurrent degrees in **Data Science** and **Business Analytics**[cite: 7]. 
-            [cite_start]I offer 5 years of programming experience in **Python** and advanced proficiency in **SQL**[cite: 7, 11]. 
-            [cite_start]With domain expertise gained from years in high-stakes healthcare environments, I specialize in translating complex data into actionable insights[cite: 8, 9].
+            Highly analytical and results-driven junior pursuing concurrent degrees in **Data Science** and **Business Analytics**. 
+            I offer 5 years of programming experience in **Python** and advanced proficiency in **SQL**. 
+            With a background in high-stakes healthcare environments (Epic, Cerner), I specialize in translating complex information into actionable insights.
         </p>
     </section>
+
+    <div class="highlight">
+        <h3>Career Reflection</h3>
+        <p><em>"My journey is defined by a transition from high-stakes clinical data management to advanced predictive modeling. I apply the same 'zero-discrepancy' mindset learned in the NICU to modern business intelligence challenges."</em></p>
+    </div>
 
     <section id="skills">
         <h2>Technical Proficiencies</h2>
@@ -54,29 +60,50 @@
             </tr>
             <tr>
                 <td>Programming</td>
-                [cite_start]<td>Python (5 years), SQL (3+ Years), HTML/CSS [cite: 11]</td>
+                <td>Python (5 years), SQL (3+ Years), HTML/CSS</td>
             </tr>
             <tr>
-                <td>Data Science Libraries</td>
-                [cite_start]<td>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn [cite: 11]</td>
+                <td>Data Science</td>
+                <td>LSTM Neural Networks, Anomaly Detection, RFM Analysis, EDA</td>
             </tr>
             <tr>
-                <td>Databases & Systems</td>
-                [cite_start]<td>Epic, Cerner, NextGen, Relational Databases [cite: 11]</td>
+                <td>Libraries</td>
+                <td>Pandas, NumPy, Scikit-learn, TensorFlow, Keras, Matplotlib</td>
             </tr>
         </table>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="edu-item">
-            <strong>Pursuing B.S. in Data Science</strong> | [cite_start]Bellevue University [cite: 15, 16] <br>
-            [cite_start]<em>Expected Graduation: March 2026</em> [cite: 17] <br>
-            [cite_start]Relevant Coursework: Probability & Statistics, Data Mining, Predictive Modeling, Advanced Python [cite: 18]
+    <section id="featured-work">
+        <h2>Featured Project Deep Dives</h2>
+        
+        <div class="project-card">
+            <h3>Predictive Sentiment Analysis (LSTM)</h3>
+            <p>Achieved an 88% F1 Score using deep learning to classify text reviews.</p>
+            <a href="lstm-sentiment.md">View Methodology →</a>
         </div>
-        <div class="edu-item">
-            <strong>Pursuing B.S. in Business Analytics</strong> | [cite_start]Bellevue University [cite: 19, 20] <br>
-            [cite_start]<em>Expected Graduation: Fall 2026</em> [cite: 21]
+
+        <div class="project-card">
+            <h3>Financial Fraud Detection</h3>
+            <p>Identified 92% of fraudulent transactions using Isolation Forest algorithms.</p>
+            <a href="fraud-detection.md">View Methodology →</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Retail Database & CLV Modeling</h3>
+            <p>Designed a 7-table relational database to calculate Customer Lifetime Value.</p>
+            <a href="sql-database-modeling.md">View Methodology →</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Housing Price EDA</h3>
+            <p>Statistical exploration to identify key drivers in real estate pricing.</p>
+            <a href="housing-eda.md">View Methodology →</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Customer Segmentation (RFM)</h3>
+            <p>Categorized 10,000+ customers into actionable value segments.</p>
+            <a href="customer-segmentation.md">View Methodology →</a>
         </div>
     </section>
 
