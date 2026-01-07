@@ -15,6 +15,8 @@
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
         th, td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; }
         th { background: #f8fafc; }
+        h2 { color: var(--primary); margin-top: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 5px; }
+        .tag { background: #e2e8f0; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 5px; }
     </style>
 </head>
 <body>
@@ -29,13 +31,20 @@
         <div class="highlight-box">
             <strong>Business Impact:</strong> Identified 92% of fraudulent transactions using Isolation Forest algorithms, reducing potential annual loss by an estimated 15%.
         </div>
-        <h2>Technical Methodology</h2>
-        <p>Using Python and Scikit-learn, I implemented an anomaly detection approach to identify suspicious financial activity without the need for labeled historical fraud data.</p>
+
+        <p>
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Unsupervised Learning</span>
+        </p>
+
+        <h2>The "What": Technical Methodology</h2>
+        <p>Using Python and Scikit-learn, I implemented an anomaly detection approach to identify suspicious financial activity without the need for labeled historical fraud data. Specifically, I utilized the **Isolation Forest** algorithm, which isolates observations by randomly selecting a feature and then randomly selecting a split value between the maximum and minimum values of the selected feature. This method is highly effective for "needle in a haystack" problems where fraudulent data points are vastly outnumbered by legitimate transactions.</p>
+        
         <table>
             <tr><th>Metric</th><th>Score</th></tr>
             <tr><td>Fraud Detection Rate (Recall)</td><td>92.0%</td></tr>
             <tr><td>False Positive Rate</td><td>2.1%</td></tr>
         </table>
-    </div>
-</body>
-</html>
+
+        <h2>The "Why": Data Science Impact</h2>
