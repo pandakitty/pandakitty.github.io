@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housing EDA | Ashley Love</title>
-    <style>/* Use same CSS as above */</style>
+    <style>
+        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
+        header { background: var(--primary); color: var(--white); padding: 40px 20px; text-align: center; }
+        nav { background: var(--white); padding: 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
+        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .highlight-box { background: #f1f5f9; border-left: 6px solid var(--accent); padding: 20px; margin: 20px 0; }
+        h2 { color: var(--primary); margin-top: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 5px; }
+        .tag { background: #e2e8f0; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 5px; }
+    </style>
 </head>
 <body>
     <header><h1>Housing Price Analysis (EDA)</h1></header>
@@ -15,8 +25,28 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
+        <div class="highlight-box">
+            <strong>Key Achievement:</strong> Analyzed 80+ features across 2,900+ data points to engineer the most significant predictors for predictive modeling.
+        </div>
+
+        <p>
+            <span class="tag">Python</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">Statistical Exploration</span>
+        </p>
+
         <h2>Exploratory Data Analysis</h2>
         <p>Using Python, Seaborn, and Matplotlib, I performed deep statistical exploration on 80+ variables to identify the strongest predictors of real estate value.</p>
-            </div>
+
+        <h2>The "What": Technical Methodology</h2>
+        <p>The methodology focused on identifying data patterns and cleaning potential noise. I utilized a **correlation heatmap** to visualize the relationship between variables like "Ground Living Area" and "Overall Quality" against the sale price. To ensure the reliability of future models, I addressed missing data through mean/mode imputation and treated skewed numerical distributions using **log transformations**. This process reduced the complexity of the dataset while preserving the variables with the highest predictive power.</p>
+
+        
+
+        <h2>The "Why": Data Science Impact</h2>
+        <p>In Data Science, model accuracy is entirely dependent on data quality. This project demonstrates my commitment to the "Zero-Discrepancy" mindset—I don't just "run models"; I investigate the data's story first. By performing a rigorous EDA, I prevent bias and ensure that the features selected for a machine learning pipeline are statistically significant. For a business, this means more accurate valuations and a deeper understanding of market drivers.</p>
+
+        <a href="index.html" style="display: inline-block; margin-top: 30px; color: var(--accent); text-decoration: none; font-weight: bold;">← Back to Portfolio Dashboard</a>
+    </div>
 </body>
 </html>
