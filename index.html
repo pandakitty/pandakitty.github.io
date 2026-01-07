@@ -132,3 +132,85 @@
 
         /* Mobile Adjustment */
         @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; }
+        }
+
+        footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="profile.png" alt="Ashley Love" class="profile-img">
+    <div class="header-text">
+        <h1>Ashley Love</h1>
+        <p class="subtitle">DATA SCIENTIST | BUSINESS ANALYTICS SPECIALIST</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.md">About</a>
+    <a href="projects.md">Work</a>
+    <a href="contact.md">Contact</a>
+    <a href="./files/Ashley_Love_Resume.pdf" target="_blank" style="color: var(--accent);">Resume PDF</a>
+</nav>
+
+<div class="container">
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Highly analytical junior pursuing concurrent degrees in Data Science and Business Analytics. I offer 5 years of Python experience and advanced SQL proficiency, specializing in translating complex healthcare data into actionable business intelligence.</p>
+        
+        <div class="reflection-quote">
+            "My journey is defined by a transition from high-stakes clinical data management to advanced predictive modeling. I apply the same 'zero-discrepancy' mindset learned in the NICU to modern business intelligence challenges."
+        </div>
+
+        <div>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">TensorFlow</span>
+            <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">Epic/Cerner</span>
+            <span class="skill-pill">Tableau</span>
+            <span class="skill-pill">EDA</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured Project Deep Dives</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Sentiment Analysis (LSTM)</h3>
+                <p>Deep learning model achieving an 88% F1 score on unstructured review data.</p>
+                <a href="lstm-sentiment.md" class="btn">View Methodology</a>
+            </div>
+            <div class="project-card">
+                <h3>Fraud Detection</h3>
+                <p>Anomaly detection system identifying 92% of fraudulent financial transactions.</p>
+                <a href="fraud-detection.md" class="btn">View Methodology</a>
+            </div>
+            <div class="project-card">
+                <h3>Retail DB Architecture</h3>
+                <p>Designed a 7-table relational schema for complex CLV analysis.</p>
+                <a href="sql-database-modeling.md" class="btn">View Methodology</a>
+            </div>
+            <div class="project-card">
+                <h3>Housing Price EDA</h3>
+                <p>Statistical exploration to identify key drivers in real estate pricing.</p>
+                <a href="housing-eda.md" class="btn">View Methodology</a>
+            </div>
+            <div class="project-card">
+                <h3>Customer Segmentation</h3>
+                <p>Categorized 10,000+ customers into actionable value segments via RFM.</p>
+                <a href="customer-segmentation.md" class="btn">View Methodology</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Ashley Love | Rancho Palos Verdes, CA
+</footer>
+
+</body>
+</html>
