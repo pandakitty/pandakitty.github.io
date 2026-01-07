@@ -14,7 +14,7 @@
 * [cite_start]**GitHub:** [pandakitty](https://github.com/pandakitty) [cite: 4]
 
 ### Resume
-* **Download:** [A_Love_Resume_Dec_2025.pdf](./files/A_Love_Resume_update_Dec_2025.pdf)  
+* **Download:** [Ashley_Love_Resume.pdf](./files/Ashley_Love_Resume.pdf)  
 *(Note: Make sure to upload your resume PDF to a folder named 'files' in this repository for this link to work.)*
 
 ---
