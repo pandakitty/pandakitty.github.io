@@ -1,15 +1,18 @@
-# Get In Touch
+[Home](./index.html) | [About](./about.md) | [Work](./projects.md) | [Contact](./contact.md)
 
-I am currently seeking opportunities in **Data Science** and **Business Analytics** starting in 2026.
+# Contact & Connections
 
-### 📧 Contact Information
+I am currently seeking opportunities in **Data Science** and **Business Analytics** where I can apply my "zero-discrepancy" approach to enterprise data challenges.
+
+### 📬 Reach Out
 * **Email:** [ashelove6969@gmail.com](mailto:ashelove6969@gmail.com)
-* **Location:** Rancho Palos Verdes, CA
 * **LinkedIn:** [linkedin.com/in/ashe-love/](https://www.linkedin.com/in/ashe-love/)
+* **GitHub:** [github.com/pandakitty](https://github.com/pandakitty)
 
 ### 📄 Professional Documents
 * **Resume:** [Download My Resume (PDF)](./files/Ashley_Love_Resume.pdf)
-* **GitHub:** [View My Repositories](https://github.com/pandakitty)
 
 ---
 *“Precision in data leads to clarity in decisions.”*
+
+[Home](./index.html) | [About](./about.md) | [Work](./projects.md)
