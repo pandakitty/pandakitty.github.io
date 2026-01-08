@@ -11,7 +11,7 @@
         /* Hero Section */
         header { background: var(--primary); color: var(--white); padding: 80px 20px; text-align: center; }
         .profile-container { margin-bottom: 20px; }
-        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 4px 25px rgba(0,0,0,0.3); }
         
         /* Navigation */
         nav { background: var(--white); padding: 1.2rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
@@ -21,16 +21,16 @@
         /* Content */
         .container { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
         h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .tagline { font-size: 1.25rem; color: #718096; margin-bottom: 30px; }
+        .tagline { font-size: 1.25rem; color: #cbd5e0; margin-bottom: 30px; letter-spacing: 1px; }
         
         /* CTA Buttons */
         .cta-group { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
-        .btn { padding: 15px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: transform 0.2s; }
-        .btn-primary { background: var(--accent); color: white; }
+        .btn { padding: 15px 35px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: all 0.3s ease; }
+        .btn-primary { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); }
         .btn-secondary { border: 2px solid var(--primary); color: var(--primary); }
-        .btn:hover { transform: translateY(-3px); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
 
-        footer { background: white; padding: 20px; text-align: center; font-size: 0.9rem; color: #a0aec0; border-top: 1px solid #e2e8f0; }
+        footer { background: var(--primary); padding: 30px; text-align: center; font-size: 0.9rem; color: #cbd5e0; margin-top: 60px; }
     </style>
 </head>
 <body>
@@ -52,18 +52,18 @@
 
     <div class="container">
         <h2>Bridging Clinical Precision with Data Science</h2>
-        <p>Welcome to my professional portfolio. Here, I showcase the synthesis of my technical expertise in Python, Machine Learning, and SQL, combined with a "zero-discrepancy" mindset cultivated in clinical data management.</p>
+        <p>I transform complex datasets into actionable business intelligence. With a foundation in high-stakes clinical data management, I bring a unique "zero-discrepancy" mindset to predictive modeling, machine learning, and statistical analysis.</p>
         
-        <p>This site serves as a functional prototype for my five core program-specific projects, featuring end-to-end visibility into the data science lifecycle.</p>
+        <p>Explore my latest work featuring end-to-end data science implementations—from raw data exploration to deployed predictive insights.</p>
 
         <div class="cta-group">
-            <a href="projects.html" class="btn btn-primary">View Technical Work</a>
-            <a href="reflection.html" class="btn btn-secondary">Read Career Reflection</a>
+            <a href="projects.html" class="btn btn-primary">View Technical Portfolio</a>
+            <a href="about.html" class="btn btn-secondary">About My Journey</a>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 Ashley Love | Built with HTML, CSS, and GitHub Pages
+        &copy; 2026 Ashley Love | Data Science & Analytics Portfolio
     </footer>
 
 </body>
