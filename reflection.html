@@ -3,47 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Reflection | Ashley Love</title>
+    <title>Ashley Love | Data Science & Analytics</title>
     <style>
-        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
-        header { background: var(--primary); color: var(--white); padding: 40px 20px; text-align: center; }
-        nav { background: var(--white); padding: 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
-        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .reflection-content { font-size: 1.1rem; color: #4a5568; }
-        .quote-block { background: #f1f5f9; border-left: 6px solid var(--accent); padding: 25px; font-style: italic; margin: 30px 0; border-radius: 4px; }
-        h3 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-top: 30px; }
-        .project-tag { display: inline-block; background: #e2e8f0; padding: 2px 10px; border-radius: 4px; font-size: 0.9rem; margin-top: 5px; }
+        :root { --primary: #0f172a; --accent: #3b82f6; --bg: #f8fafc; --text: #1e293b; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* Navigation */
+        nav { background: var(--white); padding: 1.2rem; text-align: center; position: sticky; top: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 500; color: var(--primary); transition: color 0.2s; }
+        nav a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        header { background: var(--primary); color: var(--white); padding: 90px 20px; text-align: center; }
+        .profile-container { margin-bottom: 24px; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; }
+        
+        /* Content */
+        .container { max-width: 850px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
+        h1 { font-size: 2.75rem; margin-bottom: 8px; font-weight: 800; letter-spacing: -0.025em; }
+        .tagline { font-size: 1.2rem; color: #94a3b8; margin-bottom: 32px; font-weight: 400; }
+        
+        /* CTA Buttons */
+        .cta-group { display: flex; justify-content: center; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
+        .btn { padding: 14px 32px; border-radius: 6px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-secondary { border: 1px solid #e2e8f0; background: white; color: var(--primary); }
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        .contact-info { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; font-size: 0.95rem; }
+        .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+        footer { background: var(--primary); padding: 40px; text-align: center; font-size: 0.85rem; color: #64748b; margin-top: 80px; }
     </style>
 </head>
 <body>
-    <header><h1>Career Reflection</h1></header>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Work</a>
+        <a href="projects.html">Portfolio</a>
+        <a href="reflection.html">Development</a>
         <a href="contact.html">Contact</a>
     </nav>
+
+    <header>
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Ashley Love" class="profile-img">
+        </div>
+        <h1>Ashley Love</h1>
+        <p class="tagline">Data Scientist | Machine Learning & Predictive Analytics</p>
+    </header>
+
     <div class="container">
-        <div class="reflection-content">
-            <h2>The Bridge Between Healthcare and Data</h2>
-            <p>Transitioning from the high-stakes world of clinical data management to predictive analytics has been a journey of precision and purpose.</p>
-            
-            <div class="quote-block">
-                "My journey is defined by a transition from high-stakes clinical data management to advanced predictive modeling. I apply the same 'zero-discrepancy' mindset learned in the NICU to modern business intelligence challenges."
-            </div>
+        <h2>Engineering Data-Driven Solutions</h2>
+        <p>I specialize in building robust analytical frameworks and predictive models that translate complex data into competitive advantages. My work focuses on the end-to-end data lifecycle, from advanced ETL processes to deploying scalable machine learning solutions.</p>
+        
+        <p>Currently focused on deep learning, fraud detection systems, and advanced statistical modeling to drive high-impact decision making.</p>
 
-            <p>In the NICU, I learned that every data point represents a person. Today, I use that same meticulous attention to detail to ensure that business insights are accurate, actionable, and ethical.</p>
+        <div class="cta-group">
+            <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+            <a href="mailto:ashelove6969@gmail.com" class="btn btn-secondary">Get In Touch</a>
+        </div>
 
-            <h3>Technical Evolution & Synthesis</h3>
-            <p>This portfolio represents a synthesis of my growth across the Data Science program. My technical evolution is evidenced by the five core projects hosted in this repository, ranging from <strong>Fraud Detection</strong> using XGBoost to <strong>LSTM Sentiment Analysis</strong> for natural language processing.</p>
-            
-            <p>By integrating technical methodology directly into active HTML pages—such as my <code>housing-eda.html</code> and <code>customer-segmentation.html</code> files—I am demonstrating my ability to manage the full data lifecycle. This "baked-in" documentation approach ensures end-to-end visibility for stakeholders and recruiters alike.</p>
-
-            <h3>Milestone 1 Objectives</h3>
-            <p>This deployment serves as the initial architectural prototype for my professional portfolio. By utilizing a live GitHub Pages environment, I am moving beyond static documentation to a functional, recruiter-ready platform that showcases my ability to bridge the gap between technical code and strategic business impact.</p>
+        <div class="contact-info">
+            <p>
+                <a href="https://github.com/pandakitty" target="_blank">GitHub Repository</a> • 
+                <a href="mailto:ashelove6969@gmail.com">Email Me</a>
+            </p>
         </div>
     </div>
-</body>
-</html>
+
+    <footer>
+        &copy; 20
