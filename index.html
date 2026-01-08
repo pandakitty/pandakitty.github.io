@@ -5,212 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashley Love | Data Science Portfolio</title>
     <style>
-        :root {
-            --primary: #1a2a3a; /* Deep Navy */
-            --accent: #3498db;  /* Professional Blue */
-            --bg: #f8fafc;     /* Soft Grey-White */
-            --text: #2d3748;
-            --white: #ffffff;
-        }
-
-        body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            line-height: 1.6; 
-            color: var(--text); 
-            background-color: var(--bg); 
-            margin: 0; 
-        }
-
-        /* Header Section */
-        header { 
-            background: var(--primary); 
-            color: var(--white); 
-            padding: 60px 20px; 
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid var(--accent);
-            object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .header-text h1 { margin: 0; font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
-        .subtitle { font-size: 1.1rem; color: #cbd5e0; margin-top: 5px; font-weight: 300; }
-
-        /* Navigation Bar */
-        nav { 
-            background: var(--white); 
-            padding: 1rem; 
-            text-align: center; 
-            position: sticky; 
-            top: 0; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 1000;
-        }
-
-        nav a { 
-            margin: 0 15px; 
-            text-decoration: none; 
-            font-weight: 600; 
-            color: var(--primary); 
-            transition: color 0.2s;
-        }
-
+        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* Hero Section */
+        header { background: var(--primary); color: var(--white); padding: 80px 20px; text-align: center; }
+        .profile-container { margin-bottom: 20px; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        
+        /* Navigation */
+        nav { background: var(--white); padding: 1.2rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
+        nav a { margin: 0 20px; text-decoration: none; font-weight: 600; color: var(--primary); transition: color 0.3s; }
         nav a:hover { color: var(--accent); }
 
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-
-        /* Content Sections */
-        section { 
-            background: var(--white); 
-            padding: 40px; 
-            border-radius: 12px; 
-            margin-bottom: 30px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03); 
-        }
-
-        h2 { font-size: 1.75rem; color: var(--primary); margin-top: 0; border-left: 5px solid var(--accent); padding-left: 15px; }
-
-        /* Career Reflection Block */
-        .reflection-quote {
-            background: #f1f5f9;
-            border-left: 6px solid var(--accent);
-            padding: 25px;
-            font-style: italic;
-            border-radius: 4px;
-            margin: 20px 0;
-            color: #475569;
-        }
-
-        /* Skills Badges */
-        .skill-pill {
-            display: inline-block;
-            background: #e2e8f0;
-            color: #1e293b;
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin: 4px;
-        }
-
-        /* Project Display Grid */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        /* Content */
+        .container { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .tagline { font-size: 1.25rem; color: #718096; margin-bottom: 30px; }
         
-        .project-card { 
-            border: 1px solid #edf2f7; 
-            padding: 25px; 
-            border-radius: 12px; 
-            background: #fff;
-            transition: all 0.3s ease;
-        }
+        /* CTA Buttons */
+        .cta-group { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
+        .btn { padding: 15px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: transform 0.2s; }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-secondary { border: 2px solid var(--primary); color: var(--primary); }
+        .btn:hover { transform: translateY(-3px); }
 
-        .project-card:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 12px 24px rgba(0,0,0,0.08); 
-            border-color: var(--accent);
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-
-        /* Mobile Viewport Fix */
-        @media (max-width: 600px) {
-            header { flex-direction: column; text-align: center; }
-        }
-
-        footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 0.85rem; }
+        footer { background: white; padding: 20px; text-align: center; font-size: 0.9rem; color: #a0aec0; border-top: 1px solid #e2e8f0; }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="profile.png" alt="Ashley Love" class="profile-img">
-    <div class="header-text">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Work</a>
+        <a href="reflection.html">Reflection</a>
+    </nav>
+
+    <header>
+        <div class="profile-container">
+            <img src="profile.png" alt="Ashley Love" class="profile-img">
+        </div>
         <h1>Ashley Love</h1>
-        <p class="subtitle">DATA SCIENTIST | BUSINESS ANALYTICS SPECIALIST</p>
-    </div>
-</header>
+        <p class="tagline">Data Scientist | Specialized in Clinical & Fraud Analytics</p>
+    </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Work</a>
-    <a href="reflection.html">Reflection</a>
-    <a href="contact.html">Contact</a>
-    <a href="./files/Ashley_Love_Resume.pdf" target="_blank" style="color: var(--accent);">Resume (PDF)</a>
-</nav>
-
-<div class="container">
-    <section id="summary">
-        <h2>Professional Summary</h2>
-        <p>Highly analytical junior pursuing concurrent degrees in Data Science and Business Analytics. I offer 5 years of Python experience and advanced SQL proficiency, specializing in translating complex healthcare data into actionable business intelligence.</p>
+    <div class="container">
+        <h2>Bridging Clinical Precision with Data Science</h2>
+        <p>Welcome to my professional portfolio. Here, I showcase the synthesis of my technical expertise in Python, Machine Learning, and SQL, combined with a "zero-discrepancy" mindset cultivated in clinical data management.</p>
         
-        <div class="reflection-quote">
-            "My journey is defined by a transition from high-stakes clinical data management to advanced predictive modeling. I apply the same 'zero-discrepancy' mindset learned in the NICU to modern business intelligence challenges."
-        </div>
+        <p>This site serves as a functional prototype for my five core program-specific projects, featuring end-to-end visibility into the data science lifecycle.</p>
 
-        <div>
-            <span class="skill-pill">Python (5 yrs)</span>
-            <span class="skill-pill">SQL (3+ yrs)</span>
-            <span class="skill-pill">Machine Learning</span>
-            <span class="skill-pill">Predictive Modeling</span>
-            <span class="skill-pill">Epic/Cerner</span>
-            <span class="skill-pill">Tableau</span>
+        <div class="cta-group">
+            <a href="projects.html" class="btn btn-primary">View Technical Work</a>
+            <a href="reflection.html" class="btn btn-secondary">Read Career Reflection</a>
         </div>
-    </section>
+    </div>
 
-    <section id="work">
-        <h2>Featured Project Deep Dives</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Sentiment Analysis (LSTM)</h3>
-                <p>Deep learning model achieving an 88% F1 score on unstructured review data.</p>
-                <a href="lstm-sentiment.html" class="btn">View Methodology</a>
-            </div>
-            <div class="project-card">
-                <h3>Fraud Detection</h3>
-                <p>Anomaly detection system identifying 92% of fraudulent financial transactions.</p>
-                <a href="fraud-detection.html" class="btn">View Methodology</a>
-            </div>
-            <div class="project-card">
-                <h3>Retail DB Architecture</h3>
-                <p>Designed a 7-table relational schema for complex CLV analysis.</p>
-                <a href="sql-database-modeling.html" class="btn">View Methodology</a>
-            </div>
-            <div class="project-card">
-                <h3>Housing Price EDA</h3>
-                <p>Statistical exploration to identify key drivers in real estate pricing.</p>
-                <a href="housing-eda.html" class="btn">View Methodology</a>
-            </div>
-            <div class="project-card">
-                <h3>Customer Segmentation</h3>
-                <p>Categorized 10,000+ customers into actionable value segments via RFM.</p>
-                <a href="customer-segmentation.html" class="btn">View Methodology</a>
-            </div>
-        </div>
-    </section>
-</div>
-
-<footer>
-    &copy; 2026 Ashley Love | Rancho Palos Verdes, CA | Built with HTML/CSS
-</footer>
+    <footer>
+        &copy; 2026 Ashley Love | Built with HTML, CSS, and GitHub Pages
+    </footer>
 
 </body>
 </html>
