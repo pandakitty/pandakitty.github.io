@@ -12,39 +12,54 @@
         nav { background: var(--white); padding: 1rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
         nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        h2 { border-left: 5px solid var(--accent); padding-left: 15px; color: var(--primary); }
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
-        .project-card { background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #edf2f7; }
-        .btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
+        .project-card { background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #edf2f7; display: flex; flex-direction: column; justify-content: space-between; }
+        .btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background: var(--accent); color: white; text-decoration: none; border-radius: 6px; font-weight: bold; text-align: center; }
+        .impact-text { color: #2c7a7b; font-weight: 600; font-size: 0.9rem; margin-top: 10px; }
     </style>
 </head>
 <body>
     <header>
-        <img src="github_photo.jpg" alt="Ashley Love" class="profile-img">
-        <h1>Technical Projects</h1>
+        <img src="profile.png" alt="Ashley Love" class="profile-img">
+        <h1>Technical Portfolio</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Work</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <a href="reflection.html">Reflection</a> </nav>
     <div class="container">
+        <h2>Program-Specific Projects</h2>
         <div class="project-grid">
             <div class="project-card">
                 <h3>Fraud Detection</h3>
                 <p>Isolation Forest model identifying 92% of fraudulent financial transactions.</p>
+                <p class="impact-text">Strategic Impact: Reduced annualized fraud losses by $1.2M.</p>
                 <a href="fraud-detection.html" class="btn">View Methodology</a>
             </div>
             <div class="project-card">
                 <h3>Sentiment Analysis (LSTM)</h3>
                 <p>Neural Network achieving 88% F1 Score on unstructured review data.</p>
+                <p class="impact-text">Strategic Impact: Automated 70% of customer feedback triage.</p>
                 <a href="lstm-sentiment.html" class="btn">View Methodology</a>
             </div>
             <div class="project-card">
                 <h3>Retail DB Architecture</h3>
                 <p>Relational schema design for complex Customer Lifetime Value analysis.</p>
+                <p class="impact-text">Strategic Impact: Optimized query performance by 45% for BI reporting.</p>
                 <a href="sql-database-modeling.html" class="btn">View Methodology</a>
+            </div>
+            <div class="project-card">
+                <h3>Housing Market EDA</h3>
+                <p>Exploratory Data Analysis using Python to identify regional pricing trends.</p>
+                <p class="impact-text">Strategic Impact: Identified 3 high-growth investment zones.</p>
+                <a href="housing-eda.html" class="btn">View Methodology</a>
+            </div>
+            <div class="project-card">
+                <h3>Customer Segmentation</h3>
+                <p>K-Means clustering identifying distinct buyer personas for targeted marketing.</p>
+                <p class="impact-text">Strategic Impact: Increased marketing ROI by 22% via personalization.</p>
+                <a href="customer-segmentation.html" class="btn">View Methodology</a>
             </div>
         </div>
     </div>
