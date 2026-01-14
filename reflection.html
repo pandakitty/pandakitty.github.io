@@ -3,36 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashley Love | Data Science & Business Analytics</title>
+    <title>Development | Ashley Love</title>
     <style>
         :root { --primary: #0f172a; --accent: #3b82f6; --bg: #f8fafc; --text: #1e293b; --white: #ffffff; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* Navigation */
         nav { background: var(--white); padding: 1.2rem; text-align: center; position: sticky; top: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; }
         nav a { margin: 0 15px; text-decoration: none; font-weight: 500; color: var(--primary); transition: color 0.2s; }
         nav a:hover { color: var(--accent); }
 
-        /* Hero Section */
-        header { background: var(--primary); color: var(--white); padding: 90px 20px; text-align: center; }
-        .profile-container { margin-bottom: 24px; }
-        /* Changed to profile.png to match your other pages */
-        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; }
+        header { background: var(--primary); color: var(--white); padding: 60px 20px; text-align: center; }
         
-        /* Content */
-        .container { max-width: 850px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
-        h1 { font-size: 2.75rem; margin-bottom: 8px; font-weight: 800; letter-spacing: -0.025em; }
-        .tagline { font-size: 1.2rem; color: #94a3b8; margin-bottom: 8px; font-weight: 400; }
-        .location { font-size: 1rem; color: #64748b; margin-bottom: 32px; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; flex: 1; }
+        .profile-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; }
+        .profile-img-large { width: 100%; border-radius: 8px; margin-bottom: 15px; display: block; object-fit: cover; border: 2px solid #e2e8f0; }
         
-        /* CTA Buttons */
-        .cta-group { display: flex; justify-content: center; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
-        .btn { padding: 14px 32px; border-radius: 6px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
-        .btn-primary { background: var(--accent); color: white; }
-        .btn-secondary { border: 1px solid #e2e8f0; background: white; color: var(--primary); }
-        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
-
-        .contact-info { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; font-size: 0.95rem; }
+        .content h2 { color: var(--primary); margin-top: 0; }
+        .contact-info { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.95rem; }
         .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
 
         footer { background: var(--primary); padding: 40px; text-align: center; font-size: 0.85rem; color: #64748b; margin-top: 80px; }
@@ -49,36 +36,35 @@
     </nav>
 
     <header>
-        <div class="profile-container">
-            <img src="profile.png" alt="Ashley Love" class="profile-img">
-        </div>
-        <h1>Ashley Love</h1>
-        <p class="tagline">Data Science & Business Analytics Professional</p>
-        <p class="location">Rancho Palos Verdes, Los Angeles</p>
+        <h1>Academic & Professional Development</h1>
+        <p>Rancho Palos Verdes, Los Angeles</p>
     </header>
 
     <div class="container">
-        <h2>Engineering Data-Driven Solutions</h2>
-        <p>I specialize in building robust analytical frameworks and predictive models that translate complex data into competitive advantages. My work focuses on the end-to-end data lifecycle, from advanced business intelligence to deploying scalable machine learning solutions.</p>
-        
-        <p>Currently focused on leveraging my background in precision-driven data management to drive high-impact decision making in the fields of Data Science and Business Analytics.</p>
-
-        <div class="cta-group">
-            <a href="projects.html" class="btn btn-primary">Explore Projects</a>
-            <a href="mailto:ashelove6969@gmail.com" class="btn btn-secondary">Get In Touch</a>
+        <div class="profile-card">
+            <img src="profile.png" alt="Ashley Love" class="profile-img-large">
+            <h3>Ashley Love</h3>
+            <p style="font-size: 0.9rem; color: #64748b;">Data Science & Business Analytics</p>
         </div>
+        
+        <div class="content">
+            <h2>Course Reflection</h2>
+            <p>In this section, I document my growth through the Data Science program. My transition from clinical data management to business analytics has been defined by a commitment to precision and a "zero-discrepancy" mindset.</p>
+            
+            <p>As I advance through these projects, I am focusing on the ethical implications of machine learning and the importance of creating transparent, actionable data lifecycles for stakeholders.</p>
 
-        <div class="contact-info">
-            <p>
-                <a href="https://www.linkedin.com/in/ashe-love/" target="_blank">LinkedIn</a> • 
-                <a href="https://github.com/pandakitty" target="_blank">GitHub</a> • 
-                <a href="mailto:ashelove6969@gmail.com">ashelove6969@gmail.com</a>
-            </p>
+            <div class="contact-info">
+                <p>
+                    <a href="https://www.linkedin.com/in/ashe-love/" target="_blank">LinkedIn</a> • 
+                    <a href="https://github.com/pandakitty" target="_blank">GitHub</a> • 
+                    <a href="mailto:ashelove6969@gmail.com">Email Me</a>
+                </p>
+            </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 Ashley Love | Data Science & Business Analytics Portfolio | Rancho Palos Verdes, CA
+        &copy; 2026 Ashley Love | Data Science & Business Analytics | Rancho Palos Verdes, CA
     </footer>
 
 </body>
