@@ -14,13 +14,16 @@
 
         header { background: var(--primary); color: var(--white); padding: 60px 20px; text-align: center; }
         
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; flex: 1; }
-        .profile-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2.5fr; gap: 40px; align-items: start; flex: 1; }
+        .profile-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; position: sticky; top: 100px; }
         .profile-img-large { width: 100%; border-radius: 8px; margin-bottom: 15px; display: block; object-fit: cover; border: 2px solid #e2e8f0; }
         
         .content h2 { color: var(--primary); margin-top: 0; border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
-        .tech-stack { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
-        .badge { background: #e2e8f0; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: var(--primary); }
+        .project-list { margin-top: 30px; }
+        .project-item { background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid var(--accent); box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .project-item h3 { margin-top: 0; color: var(--primary); font-size: 1.2rem; }
+        .tech-stack { display: flex; gap: 8px; margin: 15px 0; flex-wrap: wrap; }
+        .badge { background: #e2e8f0; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--primary); }
 
         .contact-info { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.95rem; }
         .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
@@ -51,35 +54,31 @@
         </div>
         
         <div class="content">
-            <h2>Strategic Implementation</h2>
-            <p>I specialize in bridging the gap between complex statistical modeling and strategic business intelligence. By applying a <strong>"zero-discrepancy" mindset</strong> to predictive modeling, I ensure technical implementations are both mathematically rigorous and aligned with high-level business objectives.</p>
-            
-            <p>My work focuses on optimizing the <strong>full data science lifecycle</strong>—from sophisticated feature engineering to the deployment of high-recall anomaly detection models. I prioritize building transparent, scalable workflows that transform raw data into actionable insights.</p>
+            <h2>Technical Program Breadth</h2>
+            <p>I maintain end-to-end visibility of the data science lifecycle by applying a <strong>"zero-discrepancy" mindset</strong> to every stage of development. My work bridges clinical precision with technical modeling to ensure business intelligence is both accurate and actionable.</p>
 
-            <h3>Core Competencies</h3>
-            <div class="tech-stack">
-                <span class="badge">Python (Scikit-Learn, XGBoost)</span>
-                <span class="badge">SQL & Database Logic</span>
-                <span class="badge">Deep Learning (LSTM)</span>
-                <span class="badge">Anomaly Detection</span>
-                <span class="badge">Predictive Modeling</span>
-            </div>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Financial Fraud Detection & Anomaly Discovery</h3>
+                    <p>Implemented <strong>Isolation Forest algorithms</strong> to identify suspicious activity without labeled historical data, achieving a 92% recall rate and reducing potential annual losses.</p>
+                    <div class="tech-stack">
+                        <span class="badge">Python</span>
+                        <span class="badge">Scikit-Learn</span>
+                        <span class="badge">Anomaly Detection</span>
+                    </div>
+                </div>
 
-            <p>Key technical implementations include utilizing <strong>Isolation Forest algorithms</strong> to achieve a 92% recall rate in financial fraud detection, providing direct business value through the identification of complex fraudulent patterns.</p>
+                <div class="project-item">
+                    <h3>LSTM Sentiment Analysis</h3>
+                    <p>Utilizing <strong>Deep Learning</strong> and Long Short-Term Memory (LSTM) networks to process complex natural language data for consumer sentiment forecasting.</p>
+                    <div class="tech-stack">
+                        <span class="badge">Deep Learning</span>
+                        <span class="badge">LSTM</span>
+                        <span class="badge">NLP</span>
+                    </div>
+                </div>
 
-            <div class="contact-info">
-                <p>
-                    <a href="https://www.linkedin.com/in/ashe-love/" target="_blank">LinkedIn</a> • 
-                    <a href="https://github.com/pandakitty" target="_blank">GitHub</a> • 
-                    <a href="mailto:ashelove6969@gmail.com">Professional Inquiry</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 Ashley Love | Data Science & Business Analytics Professional | Los Angeles, CA
-    </footer>
-
-</body>
-</html>
+                <div class="project-item">
+                    <h3>SQL Database Integrity & Detection</h3>
+                    <p>Optimizing data retrieval processes and ensuring database logic remains robust across high-volume relational environments.</p>
+                    <div
