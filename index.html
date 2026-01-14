@@ -8,16 +8,16 @@
         :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* Hero Section */
-        header { background: var(--primary); color: var(--white); padding: 80px 20px; text-align: center; }
-        .profile-container { margin-bottom: 20px; }
-        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 4px 25px rgba(0,0,0,0.3); }
-        
         /* Navigation */
         nav { background: var(--white); padding: 1.2rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
         nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); transition: color 0.3s; }
         nav a:hover { color: var(--accent); }
 
+        /* Hero Section */
+        header { background: var(--primary); color: var(--white); padding: 80px 20px; text-align: center; }
+        .profile-container { margin-bottom: 20px; }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 4px 25px rgba(0,0,0,0.3); }
+        
         /* Content */
         .container { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
         h1 { font-size: 2.5rem; margin-bottom: 10px; }
@@ -42,8 +42,8 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Work</a>
-        <a href="reflection.html">Reflection</a>
+        <a href="projects.html">Portfolio</a>
+        <a href="reflection.html">Development</a>
     </nav>
 
     <header>
@@ -53,17 +53,20 @@
         <h1>Ashley Love</h1>
         <p class="tagline">Data Science & Business Analytics Professional</p>
         <p class="location">Rancho Palos Verdes, Los Angeles</p>
+        
+        <div style="margin-top: 25px;">
+            <a href="projects.html" class="btn btn-primary">Explore My Portfolio</a>
+        </div>
     </header>
 
     <div class="container">
         <h2>Bridging Clinical Precision with Data Science</h2>
         <p>I transform complex datasets into actionable business intelligence, applying a "zero-discrepancy" mindset to predictive modeling and machine learning.</p>
         
-        <p>Explore my technical implementations and program-specific research across the data science lifecycle.</p>
+        <p>Explore my technical implementations and research across the full data science lifecycle.</p>
 
         <div class="cta-group">
-            <a href="projects.html" class="btn btn-primary">View Portfolio</a>
-            <a href="mailto:ashelove6969@gmail.com" class="btn btn-secondary">Email Me</a>
+            <a href="mailto:ashelove6969@gmail.com" class="btn btn-secondary">Email Me Directly</a>
         </div>
 
         <div class="contact-info">
@@ -76,4 +79,8 @@
     </div>
 
     <footer>
-        &copy; 2
+        &copy; 2026 Ashley Love | Data Science & Business Analytics Portfolio | Rancho Palos Verdes, CA
+    </footer>
+
+</body>
+</html>
