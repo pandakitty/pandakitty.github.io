@@ -21,9 +21,11 @@
         .content h2 { color: var(--primary); margin-top: 0; border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
         .project-list { margin-top: 30px; }
         .project-item { background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid var(--accent); box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .project-item h3 { margin-top: 0; color: var(--primary); font-size: 1.2rem; }
+        .project-item h3 { margin-top: 0; color: var(--primary); font-size: 1.25rem; }
         .tech-stack { display: flex; gap: 8px; margin: 15px 0; flex-wrap: wrap; }
         .badge { background: #e2e8f0; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--primary); }
+        .project-link { font-size: 0.9rem; color: var(--accent); text-decoration: none; font-weight: bold; }
+        .project-link:hover { text-decoration: underline; }
 
         .contact-info { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.95rem; }
         .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
@@ -51,72 +53,121 @@
             <img src="profile.png" alt="Ashley Love" class="profile-img-large">
             <h3>Ashley Love</h3>
             <p style="font-size: 0.9rem; color: #64748b;">Rancho Palos Verdes, Los Angeles</p>
+            <p style="font-size: 0.85rem;">Focus: Healthcare Informatics, Data Fidelity, & Machine Learning</p>
         </div>
         
         <div class="content">
             <h2>Technical Program Breadth</h2>
-            <p>I maintain end-to-end visibility of the data science lifecycle by applying a <strong>"zero-discrepancy" mindset</strong> to every stage of development. My work bridges clinical precision with technical modeling to ensure business intelligence is both accurate and actionable.</p>
+            <p>I maintain end-to-end visibility of the data science lifecycle by applying a <strong>"zero-discrepancy" mindset</strong> to every stage of development—from raw clinical data remediation to the deployment of deep learning engines.</p>
 
             <div class="project-list">
+                
                 <div class="project-item">
-                    <h3>Applied Data Science I (DSC-450)</h3>
-                    <p>Designed and implemented a <strong>full-stack data lifecycle</strong> strategy, focusing on relational database architecture and Python-driven automated pipelines to ensure data integrity for high-volume analytical workloads.</p>
+                    <h3>Automated Clinical Remediation Pipeline</h3>
+                    <p>Designed a modular Python pipeline to remediate missingness (97% weight data) and noise in the UCI Diabetes dataset. Preserved over 101,000 patient encounters while increasing the Data Quality Index (DQI) by 25%.</p>
                     <div class="tech-stack">
-                        <span class="badge">SQL</span>
-                        <span class="badge">Python</span>
-                        <span class="badge">ETL Pipelines</span>
-                        <span class="badge">Database Architecture</span>
+                        <span class="badge">Python</span><span class="badge">MICE Imputation</span><span class="badge">Healthcare Informatics</span><span class="badge">RegEx</span>
                     </div>
+                    <a href="https://github.com/pandakitty/Diabetes_Clinical_Remediation_Pipeline" class="project-link">View Repository →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Financial Fraud Detection & Anomaly Discovery</h3>
-                    <p>Implemented <strong>Isolation Forest algorithms</strong> to identify suspicious activity without labeled historical data, achieving a 92% recall rate and reducing potential annual losses.</p>
+                    <h3>LA Equity & Social Resource Allocation Model</h3>
+                    <p>Geospatial analysis framework synthesizing U.S. Census data to identify service deserts in Los Angeles. Built a custom Priority Score to guide equitable public funding decisions.</p>
                     <div class="tech-stack">
-                        <span class="badge">Python</span>
-                        <span class="badge">Scikit-Learn</span>
-                        <span class="badge">Anomaly Detection</span>
+                        <span class="badge">GeoPandas</span><span class="badge">API Integration</span><span class="badge">Public Policy</span>
                     </div>
+                    <a href="https://github.com/pandakitty/LA-Equity-Resource-Allocation" class="project-link">View Map Project →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>LSTM Sentiment Analysis</h3>
-                    <p>Utilizing <strong>Deep Learning</strong> and Long Short-Term Memory (LSTM) networks to process complex natural language data for consumer sentiment forecasting.</p>
+                    <h3>Deep Learning Sentiment Engine (LSTM)</h3>
+                    <p>Engineered a Long Short-Term Memory (LSTM) neural network for NLP sentiment classification. Improved accuracy by accounting for linguistic sequence and context in unstructured text data.</p>
                     <div class="tech-stack">
-                        <span class="badge">Deep Learning</span>
-                        <span class="badge">LSTM</span>
-                        <span class="badge">NLP</span>
+                        <span class="badge">Deep Learning</span><span class="badge">TensorFlow/Keras</span><span class="badge">NLP</span>
                     </div>
+                    <a href="https://github.com/pandakitty/lstm-sentiment.html" class="project-link">View Model Logic →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>SQL Database Integrity & Detection</h3>
-                    <p>Optimizing data retrieval processes and ensuring database logic remains robust across high-volume relational environments.</p>
+                    <h3>3NF Relational Database Architecture</h3>
+                    <p>Strategic design of a normalized database schema (DSC-450) to ensure data integrity and referential consistency for high-volume enterprise reporting.</p>
                     <div class="tech-stack">
-                        <span class="badge">SQL</span>
-                        <span class="badge">Database Logic</span>
-                        <span class="badge">Data Integrity</span>
+                        <span class="badge">SQL</span><span class="badge">3NF Normalization</span><span class="badge">Database Design</span>
                     </div>
+                    <a href="https://github.com/pandakitty/sql-database-modeling.html" class="project-link">View Schema Design →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Housing Market Exploratory Data Analysis</h3>
-                    <p>Leveraging statistical analysis to identify pricing trends and market volatility through rigorous feature engineering and visualization.</p>
+                    <h3>E-Commerce Sales Forecasting & Segmentation</h3>
+                    <p>Coupled K-Means clustering with Facebook Prophet time-series models to predict retail demand trends and define high-value customer personas.</p>
                     <div class="tech-stack">
-                        <span class="badge">Python</span>
-                        <span class="badge">EDA</span>
-                        <span class="badge">Predictive Modeling</span>
+                        <span class="badge">Prophet</span><span class="badge">K-Means</span><span class="badge">Business Intelligence</span>
                     </div>
+                    <a href="https://github.com/pandakitty/E-Commerce-Sales-Forecast" class="project-link">View Forecast Report →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Strategic Customer Segmentation</h3>
-                    <p>Applying unsupervised learning techniques to define high-value customer profiles and improve business targeting strategies.</p>
+                    <h3>Financial Fraud Detection (Imbalanced Data)</h3>
+                    <p>Developed a robust fraud detection framework utilizing SMOTE and precision-recall optimization to identify high-risk transactions in skewed financial datasets.</p>
                     <div class="tech-stack">
-                        <span class="badge">Clustering</span>
-                        <span class="badge">Business Analytics</span>
-                        <span class="badge">XGBoost</span>
+                        <span class="badge">SMOTE</span><span class="badge">Anomaly Detection</span><span class="badge">Financial Tech</span>
                     </div>
+                    <a href="https://github.com/pandakitty/fraud-detection.html" class="project-link">View Security Logic →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Customer Churn Prediction Strategy</h3>
+                    <p>Classification framework (Logistic Regression & Gradient Boosting) used to quantify retention ROI by identifying at-risk users through behavioral patterns.</p>
+                    <div class="tech-stack">
+                        <span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">ROI Analysis</span>
+                    </div>
+                    <a href="https://github.com/pandakitty/Customer-Churn-Analysis" class="project-link">View Churn Analysis →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Full-Stack Housing Predictor (Flask)</h3>
+                    <p>Live-deployable web application using Lasso Regression to provide real-time property estimates for the Anchorage housing market.</p>
+                    <div class="tech-stack">
+                        <span class="badge">Flask</span><span class="badge">Regression Analysis</span><span class="badge">Deployment</span>
+                    </div>
+                    <a href="https://github.com/pandakitty/housing-eda.html" class="project-link">View Deployment →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Interactive Equity Performance Analysis</h3>
+                    <p>Visualizing market volatility and rolling financial averages using Plotly to create interactive, dynamic equity dashboards.</p>
+                    <div class="tech-stack">
+                        <span class="badge">Plotly</span><span class="badge">Time-Series</span><span class="badge">Risk Metrics</span>
+                    </div>
+                    <a href="https://github.com/pandakitty/Financial-Time-Series-Analysis" class="project-link">View Dashboard →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>NLTK Sentiment Classification Pipeline</h3>
+                    <p>End-to-end NLP pipeline demonstrating raw text cleaning, tokenization, and sentiment classification using Python and NLTK.</p>
+                    <div class="tech-stack">
+                        <span class="badge">NLTK</span><span class="badge">Preprocessing</span><span class="badge">Tokenization</span>
+                    </div>
+                    <a href="https://github.com/pandakitty/sentiment_analysis_ipynb" class="project-link">View NLP Repo →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Applied Data Science Visualizer (P1)</h3>
+                    <p>Statistical storytelling project focused on complex data distributions and visual forensics to identify data drift and statistical outliers.</p>
+                    <div class="tech-stack">
+                        <span class="badge">Seaborn</span><span class="badge">Matplotlib</span><span class="badge">Data Forensics</span>
+                    </div>
+                    <a href="https://github.com/pandakitty/P1-DataVisualizer-Applied-Data-Science" class="project-link">View Visuals →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>RFM Customer Analytics Engine</h3>
+                    <p>Implemented Recency, Frequency, and Monetary (RFM) analysis to segment customer bases into actionable personas for hyper-targeted marketing.</p>
+                    <div class="tech-stack">
+                        <span class="badge">RFM Analysis</span><span class="badge">Unsupervised Learning</span>
+                    </div>
+                    <a href="https://github.com/pandakitty/customer-segmentation.html" class="project-link">View Analysis →</a>
                 </div>
             </div>
 
