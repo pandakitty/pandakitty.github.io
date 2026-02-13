@@ -19,13 +19,19 @@
         .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 4px 25px rgba(0,0,0,0.3); }
         
         /* Content */
-        .container { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
+        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
         h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .tagline { font-size: 1.25rem; color: #cbd5e0; margin-bottom: 10px; letter-spacing: 1px; }
         .location { font-size: 1rem; color: #a0aec0; margin-bottom: 30px; }
         
+        /* Project Grid */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 50px; text-align: left; }
+        .project-card { background: var(--white); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent); }
+        .project-card h3 { color: var(--primary); margin-top: 0; }
+        .skill-tag { display: inline-block; background: #ebf8ff; color: #2b6cb0; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; margin: 4px 2px; font-weight: bold; }
+
         /* CTA Buttons */
-        .btn { padding: 15px 35px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: all 0.3s ease; display: inline-block; min-width: 180px; }
+        .btn { padding: 12px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: all 0.3s ease; display: inline-block; margin-top: 15px; font-size: 0.9rem; }
         .btn-primary { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); }
         .btn-secondary { border: 2px solid var(--primary); color: var(--primary); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
@@ -55,7 +61,7 @@
         <p class="location">Rancho Palos Verdes, Los Angeles</p>
         
         <div style="margin-top: 25px;">
-            <a href="projects.html" class="btn btn-primary">Explore My Portfolio</a>
+            <a href="#featured-projects" class="btn btn-primary">Explore My Portfolio</a>
         </div>
     </header>
 
@@ -63,9 +69,40 @@
         <h2>Bridging Clinical Precision with Data Science</h2>
         <p>I transform complex datasets into actionable business intelligence, applying a "zero-discrepancy" mindset to predictive modeling and machine learning.</p>
         
-        <p>Explore my technical implementations and research across the full data science lifecycle.</p>
+        <div id="featured-projects" class="project-grid">
+            
+            <div class="project-card">
+                <span class="skill-tag">Python</span><span class="skill-tag">Clinical Informatics</span><span class="skill-tag">MICE</span>
+                <h3>Clinical Remediation Pipeline</h3>
+                <p>Automated Python pipeline designed to remediate systemic defects in hospital records, achieving a 25% increase in Data Quality Index (DQI).</p>
+                <a href="https://github.com/pandakitty/Diabetes_Clinical_Remediation_Pipeline" class="btn btn-secondary">Source Code</a>
+                <a href="Final_Technical_White_Paper.pdf" class="btn btn-primary">White Paper</a>
+            </div>
 
-        <div class="cta-group" style="margin-top: 40px;">
+            <div class="project-card">
+                <span class="skill-tag">GeoPandas</span><span class="skill-tag">Census API</span><span class="skill-tag">Policy</span>
+                <h3>LA Equity Allocation Model</h3>
+                <p>Geospatial framework identifying "service deserts" in Los Angeles by synthesizing Census data into a custom Priority Score for equitable funding.</p>
+                <a href="https://github.com/pandakitty/LA-Equity-Resource-Allocation" class="btn btn-secondary">Explore Map</a>
+            </div>
+
+            <div class="project-card">
+                <span class="skill-tag">Scikit-Learn</span><span class="skill-tag">Classification</span><span class="skill-tag">GBM</span>
+                <h3>Customer Churn Prediction</h3>
+                <p>High-impact classification model using Gradient Boosting to identify at-risk users, driving retention strategies through data-backed ROI.</p>
+                <a href="https://github.com/pandakitty/Customer-Churn-Analysis" class="btn btn-secondary">View Repo</a>
+            </div>
+
+            <div class="project-card">
+                <span class="skill-tag">K-Means</span><span class="skill-tag">Unsupervised Learning</span><span class="skill-tag">RFM</span>
+                <h3>Customer Segmentation Engine</h3>
+                <p>Strategic clustering model using RFM analysis to segment customer bases into distinct personas for hyper-targeted marketing campaigns.</p>
+                <a href="https://github.com/pandakitty/customer-segmentation.html" class="btn btn-secondary">View Repo</a>
+            </div>
+
+        </div>
+
+        <div class="cta-group" style="margin-top: 60px;">
             <a href="mailto:ashelove6969@gmail.com" class="btn btn-secondary">Professional Inquiry</a>
         </div>
 
