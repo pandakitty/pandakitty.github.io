@@ -19,25 +19,22 @@
         .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 4px 25px rgba(0,0,0,0.3); }
         
         /* Content */
-        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
         h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .tagline { font-size: 1.25rem; color: #cbd5e0; margin-bottom: 10px; letter-spacing: 1px; }
         .location { font-size: 1rem; color: #a0aec0; margin-bottom: 30px; }
         
         /* Project Grid */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 50px; text-align: left; }
-        .project-card { background: var(--white); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent); }
-        .project-card h3 { color: var(--primary); margin-top: 0; }
-        .skill-tag { display: inline-block; background: #ebf8ff; color: #2b6cb0; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; margin: 4px 2px; font-weight: bold; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 50px; text-align: left; }
+        .project-card { background: var(--white); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between; }
+        .project-card h3 { color: var(--primary); margin-top: 10px; font-size: 1.2rem; }
+        .skill-tag { display: inline-block; background: #ebf8ff; color: #2b6cb0; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; margin: 2px; font-weight: bold; }
 
         /* CTA Buttons */
-        .btn { padding: 12px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: all 0.3s ease; display: inline-block; margin-top: 15px; font-size: 0.9rem; }
-        .btn-primary { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); }
-        .btn-secondary { border: 2px solid var(--primary); color: var(--primary); }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-
-        .contact-info { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #4a5568; }
-        .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .btn { padding: 10px 20px; border-radius: 6px; font-weight: bold; text-decoration: none; transition: all 0.3s ease; display: inline-block; margin-top: 15px; font-size: 0.85rem; text-align: center; }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-secondary { border: 1.5px solid var(--primary); color: var(--primary); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
         footer { background: var(--primary); padding: 30px; text-align: center; font-size: 0.9rem; color: #cbd5e0; margin-top: 60px; }
     </style>
@@ -59,58 +56,131 @@
         <h1>Ashley Love</h1>
         <p class="tagline">Data Science & Business Analytics Professional</p>
         <p class="location">Rancho Palos Verdes, Los Angeles</p>
-        
         <div style="margin-top: 25px;">
-            <a href="#featured-projects" class="btn btn-primary">Explore My Portfolio</a>
+            <a href="#featured-projects" class="btn btn-primary">Explore 12 Technical Projects</a>
         </div>
     </header>
 
     <div class="container">
-        <h2>Bridging Clinical Precision with Data Science</h2>
-        <p>I transform complex datasets into actionable business intelligence, applying a "zero-discrepancy" mindset to predictive modeling and machine learning.</p>
+        <h2>Technical Portfolio</h2>
+        <p>Transforming complex clinical and business datasets into high-fidelity actionable intelligence.</p>
         
         <div id="featured-projects" class="project-grid">
             
             <div class="project-card">
-                <span class="skill-tag">Python</span><span class="skill-tag">Clinical Informatics</span><span class="skill-tag">MICE</span>
-                <h3>Clinical Remediation Pipeline</h3>
-                <p>Automated Python pipeline designed to remediate systemic defects in hospital records, achieving a 25% increase in Data Quality Index (DQI).</p>
+                <div>
+                    <span class="skill-tag">Python</span><span class="skill-tag">MICE</span><span class="skill-tag">Clinical Informatics</span>
+                    <h3>Clinical Remediation Pipeline</h3>
+                    <p>Automated pipeline designed to remediate systemic defects in 100k+ hospital records, achieving a 25% DQI improvement.</p>
+                </div>
                 <a href="https://github.com/pandakitty/Diabetes_Clinical_Remediation_Pipeline" class="btn btn-secondary">Source Code</a>
-                <a href="Final_Technical_White_Paper.pdf" class="btn btn-primary">White Paper</a>
             </div>
 
             <div class="project-card">
-                <span class="skill-tag">GeoPandas</span><span class="skill-tag">Census API</span><span class="skill-tag">Policy</span>
-                <h3>LA Equity Allocation Model</h3>
-                <p>Geospatial framework identifying "service deserts" in Los Angeles by synthesizing Census data into a custom Priority Score for equitable funding.</p>
+                <div>
+                    <span class="skill-tag">Prophet</span><span class="skill-tag">Time-Series</span><span class="skill-tag">Retail</span>
+                    <h3>E-Commerce Sales Forecast</h3>
+                    <p>Time Series model using Facebook Prophet to forecast retail sales, optimizing inventory and staffing decisions.</p>
+                </div>
+                <a href="https://github.com/pandakitty/E-Commerce-Sales-Forecast" class="btn btn-secondary">View Forecast</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="skill-tag">K-Means</span><span class="skill-tag">RFM</span><span class="skill-tag">Unsupervised</span>
+                    <h3>Customer Segmentation Engine</h3>
+                    <p>Unsupervised learning model for customer segmentation using RFM analysis to drive targeted marketing campaigns.</p>
+                </div>
+                <a href="https://github.com/pandakitty/customer-segmentation.html" class="btn btn-secondary">View Clusters</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="skill-tag">SQL</span><span class="skill-tag">3NF</span><span class="skill-tag">Data Architecture</span>
+                    <h3>Relational Database Modeling</h3>
+                    <p>Strategic design of a normalized SQL database schema to ensure referential integrity and support enterprise BI.</p>
+                </div>
+                <a href="https://github.com/pandakitty/sql-database-modeling.html" class="btn btn-secondary">View Schema</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span><span class="skill-tag">Applied DS</span>
+                    <h3>Applied Data Visualizer</h3>
+                    <p>Advanced statistical visualization project focused on complex storytelling and distribution analysis.</p>
+                </div>
+                <a href="https://github.com/pandakitty/P1-DataVisualizer-Applied-Data-Science" class="btn btn-secondary">View Visuals</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="skill-tag">Deep Learning</span><span class="skill-tag">LSTM</span><span class="skill-tag">NLP</span>
+                    <h3>LSTM Sentiment Analysis</h3>
+                    <p>Deep Learning model built to classify sentiment in Amazon reviews, accounting for linguistic sequence and context.</p>
+                </div>
+                <a href="https://github.com/pandakitty/lstm-sentiment.html" class="btn btn-secondary">View Model</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="skill-tag">GeoPandas</span><span class="skill-tag">Census API</span><span class="skill-tag">Geospatial</span>
+                    <h3>LA Equity Resource Allocation</h3>
+                    <p>Analytical model using U.S. Census data to generate a Priority Score for equitable funding decisions in Los Angeles.</p>
+                </div>
                 <a href="https://github.com/pandakitty/LA-Equity-Resource-Allocation" class="btn btn-secondary">Explore Map</a>
             </div>
 
             <div class="project-card">
-                <span class="skill-tag">Scikit-Learn</span><span class="skill-tag">Classification</span><span class="skill-tag">GBM</span>
-                <h3>Customer Churn Prediction</h3>
-                <p>High-impact classification model using Gradient Boosting to identify at-risk users, driving retention strategies through data-backed ROI.</p>
-                <a href="https://github.com/pandakitty/Customer-Churn-Analysis" class="btn btn-secondary">View Repo</a>
+                <div>
+                    <span class="skill-tag">Flask</span><span class="skill-tag">Lasso</span><span class="skill-tag">Deployment</span>
+                    <h3>Housing Price Prediction</h3>
+                    <p>Full-stack machine learning solution featuring a Lasso Regression model and a live Flask web application deployment.</p>
+                </div>
+                <a href="https://github.com/pandakitty/housing-eda.html" class="btn btn-secondary">View App Repo</a>
             </div>
 
             <div class="project-card">
-                <span class="skill-tag">K-Means</span><span class="skill-tag">Unsupervised Learning</span><span class="skill-tag">RFM</span>
-                <h3>Customer Segmentation Engine</h3>
-                <p>Strategic clustering model using RFM analysis to segment customer bases into distinct personas for hyper-targeted marketing campaigns.</p>
-                <a href="https://github.com/pandakitty/customer-segmentation.html" class="btn btn-secondary">View Repo</a>
+                <div>
+                    <span class="skill-tag">Scikit-Learn</span><span class="skill-tag">GBM</span><span class="skill-tag">Classification</span>
+                    <h3>Customer Churn Analysis</h3>
+                    <p>Classification model designed to predict and analyze customer churn to inform business retention strategies.</p>
+                </div>
+                <a href="https://github.com/pandakitty/Customer-Churn-Analysis" class="btn btn-secondary">View Analysis</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="skill-tag">Plotly</span><span class="skill-tag">Finance</span><span class="skill-tag">Interactive</span>
+                    <h3>Financial Time-Series Dashboard</h3>
+                    <p>Interactive visualization of equity performance and comparative trends using financial metrics and Plotly.</p>
+                </div>
+                <a href="https://github.com/pandakitty/Financial-Time-Series-Analysis" class="btn btn-secondary">View Dashboard</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="skill-tag">NLTK</span><span class="skill-tag">Sentiment</span><span class="skill-tag">NLP</span>
+                    <h3>Social Media Sentiment Pipeline</h3>
+                    <p>End-to-end NLP project demonstrating sentiment analysis on social media data using Python and Scikit-learn.</p>
+                </div>
+                <a href="https://github.com/pandakitty/sentiment_analysis_ipynb" class="btn btn-secondary">View NLP Repo</a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="skill-tag">SMOTE</span><span class="skill-tag">Imbalanced Class</span><span class="skill-tag">Risk</span>
+                    <h3>Financial Fraud Detection</h3>
+                    <p>ML model using imbalanced data techniques to detect fraudulent transactions with high sensitivity and accuracy.</p>
+                </div>
+                <a href="https://github.com/pandakitty/fraud-detection.html" class="btn btn-secondary">Security Logic</a>
             </div>
 
         </div>
 
-        <div class="cta-group" style="margin-top: 60px;">
-            <a href="mailto:ashelove6969@gmail.com" class="btn btn-secondary">Professional Inquiry</a>
-        </div>
-
-        <div class="contact-info">
+        <div class="contact-info" style="margin-top: 60px;">
             <p>Connect with me: 
                 <a href="https://www.linkedin.com/in/ashe-love/" target="_blank">LinkedIn</a> | 
-                <a href="https://github.com/pandakitty" target="_blank">GitHub</a> | 
-                <a href="mailto:ashelove6969@gmail.com">Contact Email</a>
+                <a href="https://github.com/pandakitty" target="_blank">GitHub</a>
             </p>
         </div>
     </div>
