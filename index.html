@@ -37,6 +37,10 @@
         .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
         footer { background: var(--primary); padding: 30px; text-align: center; font-size: 0.9rem; color: #cbd5e0; margin-top: 60px; }
+
+        /* Academic Section Styling - New */
+        .academic-section { background: var(--white); border-radius: 12px; padding: 40px; margin-bottom: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; border-left: 5px solid var(--accent); }
+        .academic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -55,13 +59,35 @@
         </div>
         <h1>Ashley Love</h1>
         <p class="tagline">Data Science & Business Analytics Professional</p>
-        <p class="location">Rancho Palos Verdes, Los Angeles</p>
+        <p class="location">Rancho Palos Verdes, Los Angeles [cite: 2]</p>
         <div style="margin-top: 25px;">
             <a href="#featured-projects" class="btn btn-primary">Explore 12 Technical Projects</a>
+            <a href="Ashley Love.pdf" target="_blank" class="btn btn-secondary" style="background: var(--white); margin-left: 10px;">Download Resume</a>
         </div>
     </header>
 
     <div class="container">
+        
+        <div class="academic-section">
+            <h2 style="margin-top: 0; color: var(--primary);">Academic Achievements</h2>
+            <div class="academic-grid">
+                <div>
+                    <h3 style="margin-bottom: 5px;">Bellevue University</h3>
+                    <p style="margin: 0;"><strong>B.S. Data Science</strong> </p>
+                    <p style="margin: 0;">Cumulative GPA: 3.68 </p>
+                    <p style="margin: 0;"><strong>B.S. Business Analytics</strong> </p>
+                    <p style="margin: 0; font-size: 0.9rem; color: #718096;">Pursuing concurrent technical degrees </p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 5px;">Honors & Recognition</h3>
+                    <ul style="padding-left: 20px; margin: 0;">
+                        <li><strong>Omega Nu Lambda:</strong> Inducted for academic excellence </li>
+                        <li><strong>President’s & Dean’s List:</strong> Recognized for 4.0 GPA performance </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <h2>Technical Portfolio</h2>
         <p>Transforming complex clinical and business datasets into high-fidelity actionable intelligence.</p>
         
@@ -71,7 +97,7 @@
                 <div>
                     <span class="skill-tag">Python</span><span class="skill-tag">MICE</span><span class="skill-tag">Clinical Informatics</span>
                     <h3>Clinical Remediation Pipeline</h3>
-                    <p>Automated pipeline designed to remediate systemic defects in 100k+ hospital records, achieving a 25% DQI improvement.</p>
+                    <p>Automated pipeline designed to remediate systemic defects in 100k+ hospital records, achieving a 25% DQI improvement. [cite: 7]</p>
                 </div>
                 <a href="https://github.com/pandakitty/Diabetes_Clinical_Remediation_Pipeline" class="btn btn-secondary">Source Code</a>
             </div>
@@ -80,7 +106,7 @@
                 <div>
                     <span class="skill-tag">Prophet</span><span class="skill-tag">Time-Series</span><span class="skill-tag">Retail</span>
                     <h3>E-Commerce Sales Forecast</h3>
-                    <p>Time Series model using Facebook Prophet to forecast retail sales, optimizing inventory and staffing decisions.</p>
+                    <p>Time Series model using Facebook Prophet to forecast retail sales, optimizing inventory and staffing decisions. [cite: 11]</p>
                 </div>
                 <a href="https://github.com/pandakitty/E-Commerce-Sales-Forecast" class="btn btn-secondary">View Forecast</a>
             </div>
@@ -98,7 +124,7 @@
                 <div>
                     <span class="skill-tag">SQL</span><span class="skill-tag">3NF</span><span class="skill-tag">Data Architecture</span>
                     <h3>Relational Database Modeling</h3>
-                    <p>Strategic design of a normalized SQL database schema to ensure referential integrity and support enterprise BI.</p>
+                    <p>Strategic design of a normalized SQL database schema to ensure referential integrity and support enterprise BI. [cite: 9]</p>
                 </div>
                 <a href="https://github.com/pandakitty/sql-database-modeling.html" class="btn btn-secondary">View Schema</a>
             </div>
@@ -116,7 +142,7 @@
                 <div>
                     <span class="skill-tag">Deep Learning</span><span class="skill-tag">LSTM</span><span class="skill-tag">NLP</span>
                     <h3>LSTM Sentiment Analysis</h3>
-                    <p>Deep Learning model built to classify sentiment in Amazon reviews, accounting for linguistic sequence and context.</p>
+                    <p>Deep Learning model built to classify sentiment in Amazon reviews, accounting for linguistic sequence and context. [cite: 9]</p>
                 </div>
                 <a href="https://github.com/pandakitty/lstm-sentiment.html" class="btn btn-secondary">View Model</a>
             </div>
@@ -125,7 +151,7 @@
                 <div>
                     <span class="skill-tag">GeoPandas</span><span class="skill-tag">Census API</span><span class="skill-tag">Geospatial</span>
                     <h3>LA Equity Resource Allocation</h3>
-                    <p>Analytical model using U.S. Census data to generate a Priority Score for equitable funding decisions in Los Angeles.</p>
+                    <p>Analytical model using U.S. Census data to generate a Priority Score for equitable funding decisions in Los Angeles. [cite: 11]</p>
                 </div>
                 <a href="https://github.com/pandakitty/LA-Equity-Resource-Allocation" class="btn btn-secondary">Explore Map</a>
             </div>
@@ -134,7 +160,7 @@
                 <div>
                     <span class="skill-tag">Flask</span><span class="skill-tag">Lasso</span><span class="skill-tag">Deployment</span>
                     <h3>Housing Price Prediction</h3>
-                    <p>Full-stack machine learning solution featuring a Lasso Regression model and a live Flask web application deployment.</p>
+                    <p>Full-stack machine learning solution featuring a Lasso Regression model and a live Flask web application deployment. [cite: 9]</p>
                 </div>
                 <a href="https://github.com/pandakitty/housing-eda.html" class="btn btn-secondary">View App Repo</a>
             </div>
@@ -143,7 +169,7 @@
                 <div>
                     <span class="skill-tag">Scikit-Learn</span><span class="skill-tag">GBM</span><span class="skill-tag">Classification</span>
                     <h3>Customer Churn Analysis</h3>
-                    <p>Classification model designed to predict and analyze customer churn to inform business retention strategies.</p>
+                    <p>Classification model designed to predict and analyze customer churn to inform business retention strategies. [cite: 11]</p>
                 </div>
                 <a href="https://github.com/pandakitty/Customer-Churn-Analysis" class="btn btn-secondary">View Analysis</a>
             </div>
@@ -161,7 +187,7 @@
                 <div>
                     <span class="skill-tag">NLTK</span><span class="skill-tag">Sentiment</span><span class="skill-tag">NLP</span>
                     <h3>Social Media Sentiment Pipeline</h3>
-                    <p>End-to-end NLP project demonstrating sentiment analysis on social media data using Python and Scikit-learn.</p>
+                    <p>End-to-end NLP project demonstrating sentiment analysis on social media data using Python and Scikit-learn. [cite: 9]</p>
                 </div>
                 <a href="https://github.com/pandakitty/sentiment_analysis_ipynb" class="btn btn-secondary">View NLP Repo</a>
             </div>
@@ -170,7 +196,7 @@
                 <div>
                     <span class="skill-tag">SMOTE</span><span class="skill-tag">Imbalanced Class</span><span class="skill-tag">Risk</span>
                     <h3>Financial Fraud Detection</h3>
-                    <p>ML model using imbalanced data techniques to detect fraudulent transactions with high sensitivity and accuracy.</p>
+                    <p>ML model using imbalanced data techniques to detect fraudulent transactions with high sensitivity and accuracy. [cite: 7, 11]</p>
                 </div>
                 <a href="https://github.com/pandakitty/fraud-detection.html" class="btn btn-secondary">Security Logic</a>
             </div>
@@ -186,7 +212,7 @@
     </div>
 
     <footer>
-        &copy; 2026 Ashley Love | Data Science & Business Analytics | Rancho Palos Verdes, CA
+        &copy; 2026 Ashley Love | Data Science & Business Analytics | Rancho Palos Verdes, CA [cite: 2]
     </footer>
 
 </body>
