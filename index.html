@@ -18,12 +18,28 @@
         .profile-container { margin-bottom: 20px; }
         .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 4px 25px rgba(0,0,0,0.3); }
         
-        /* Content */
+        /* Content Containers */
         .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; text-align: center; flex: 1; }
         h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .tagline { font-size: 1.25rem; color: #cbd5e0; margin-bottom: 10px; letter-spacing: 1px; }
         .location { font-size: 1rem; color: #a0aec0; margin-bottom: 30px; }
         
+        /* Academic Achievement Styling - Grid Layout */
+        .academic-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            margin-bottom: 50px; 
+            text-align: left; 
+        }
+        .academic-card { 
+            background: var(--white); 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            border-top: 4px solid var(--accent);
+        }
+
         /* Project Grid */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 50px; text-align: left; }
         .project-card { background: var(--white); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between; }
@@ -37,10 +53,6 @@
         .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
         footer { background: var(--primary); padding: 30px; text-align: center; font-size: 0.9rem; color: #cbd5e0; margin-top: 60px; }
-
-        /* Academic Section Styling */
-        .academic-section { background: var(--white); border-radius: 12px; padding: 40px; margin-bottom: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; border-left: 5px solid var(--accent); }
-        .academic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -68,23 +80,21 @@
 
     <div class="container">
         
-        <div class="academic-section">
-            <h2 style="margin-top: 0; color: var(--primary);">Academic Achievements</h2>
-            <div class="academic-grid">
-                <div>
-                    <h3 style="margin-bottom: 5px;">Bellevue University</h3>
-                    <p style="margin: 0;"><strong>B.S. Data Science</strong></p>
-                    <p style="margin: 0;">Cumulative GPA: 3.68</p>
-                    <p style="margin: 0;"><strong>B.S. Business Analytics</strong></p>
-                    <p style="margin: 0; font-size: 0.9rem; color: #718096;">Pursuing concurrent technical degrees</p>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 5px;">Honors & Recognition</h3>
-                    <ul style="padding-left: 20px; margin: 0;">
-                        <li><strong>Omega Nu Lambda:</strong> Inducted for academic excellence</li>
-                        <li><strong>President’s & Dean’s List:</strong> Recognized for 4.0 GPA performance</li>
-                    </ul>
-                </div>
+        <h2 style="margin-bottom: 30px;">Academic Excellence</h2>
+        <div class="academic-container">
+            <div class="academic-card">
+                <h3 style="color: var(--primary); margin-top: 0;">Education</h3>
+                <p style="margin: 5px 0;"><strong>Bellevue University</strong></p>
+                <p style="margin: 0; color: var(--accent);">B.S. Data Science | GPA: 3.68</p>
+                <p style="margin: 0;">B.S. Business Analytics</p>
+                <p style="font-size: 0.85rem; color: #718096; margin-top: 5px;">Pursuing concurrent technical degrees in Academic Good Standing.</p>
+            </div>
+            <div class="academic-card">
+                <h3 style="color: var(--primary); margin-top: 0;">Honors & Recognition</h3>
+                <ul style="padding-left: 20px; margin: 0;">
+                    <li><strong>Omega Nu Lambda:</strong> Inducted for academic excellence.</li>
+                    <li><strong>President’s & Dean’s List:</strong> Maintained a 4.0 GPA while carrying a full-time load.</li>
+                </ul>
             </div>
         </div>
 
@@ -92,7 +102,6 @@
         <p>Transforming complex clinical and business datasets into high-fidelity actionable intelligence.</p>
         
         <div id="featured-projects" class="project-grid">
-            
             <div class="project-card">
                 <div>
                     <span class="skill-tag">Python</span><span class="skill-tag">MICE</span><span class="skill-tag">Clinical Informatics</span>
@@ -196,7 +205,7 @@
                 <div>
                     <span class="skill-tag">SMOTE</span><span class="skill-tag">Imbalanced Class</span><span class="skill-tag">Risk</span>
                     <h3>Financial Fraud Detection</h3>
-                    <p>ML model using imbalanced data techniques to detect fraudulent transactions with high sensitivity and accuracy.</p>
+                    <p>ML model using imbalanced data techniques to detect fraudulent transactions with 98.5% precision and high sensitivity.</p>
                 </div>
                 <a href="https://github.com/pandakitty/fraud-detection.html" class="btn btn-secondary">Security Logic</a>
             </div>
