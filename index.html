@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashley Love | Enterprise AI Engineer</title>
+    <title>Ashley Love | Data Scientist</title>
     <style>
-        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; }
-        header { background: var(--primary); color: #fff; padding: 60px 20px; text-align: center; }
-        nav { background: #fff; padding: 1rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
+        header { background: var(--primary); color: var(--white); padding: 40px 20px; display: flex; align-items: center; justify-content: center; gap: 20px; }
+        .profile-img { width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--accent); object-fit: cover; }
+        nav { background: var(--white); padding: 1rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
         nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
-        .container { max-width: 900px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        footer { text-align: center; padding: 20px; color: #718096; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <header>
+        <img src="profile.png" alt="Ashley Love" class="profile-img">
         <h1>Ashley Love</h1>
-        <p>Enterprise AI & Data Engineer</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -26,6 +28,19 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        </div>
+        <h2>Professional Summary</h2>
+        <p>Senior Data Scientist specializing in the architecture, deployment, and observability of scalable machine learning systems. Expert in designing "Sentinel" self-healing monitoring layers to ensure 99.9% data integrity in mission-critical environments. Proven ability to bridge the gap between Python prototyping and production-grade enterprise infrastructure, with deep experience in RAG pipelines, distributed data processing, and governance-heavy sectors.</p>
+
+        <h2>Enterprise Agentic AI Engineering</h2>
+        <p>Architecting production-grade agentic AI workflows designed to streamline enterprise operations. Specializing in multi-agent orchestration (planner/worker/reviewer patterns) and the development of event-driven intelligence layers atop enterprise data lakehouses.</p>
+        <ul>
+            <li><strong>Agentic Frameworks:</strong> Implementation of MCP, LangGraph, and AutoGen for scalable decision support.</li>
+            <li><strong>Infrastructure:</strong> Designing cloud-native AI workflows with Azure OpenAI, ensuring secure identity management and secrets governance.</li>
+            <li><strong>Observability:</strong> Instrumenting workflows with tracing and drift monitoring to ensure 99.9% reliability in B2B SaaS environments.</li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2026 Ashley Love | Data Scientist | Rancho Palos Verdes, CA</p>
+    </footer>
 </body>
 </html>
