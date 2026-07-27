@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data Cleanup & Quality Deep Dive | Ashley Love</title>
+    <style>
+        :root { 
+            --primary: #FAFAFA; 
+            --secondary: #F0F0F0; 
+            --accent: #555555; 
+            --bg: #FAFAFA; 
+            --text: #333333; 
+            --muted: #666666;
+            --white: #0A0A0A; 
+            --border: #0A0A0A;
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
+        header { background: var(--secondary); color: var(--white); padding: 50px 20px; text-align: center; border-bottom: 2px solid var(--border); }
+        header h1 { font-size: 1.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin: 0; }
+        nav { background: var(--secondary); padding: 1rem; text-align: center; border-bottom: 2px solid var(--border); }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text); }
+        nav a:hover { color: var(--white); }
+        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: var(--primary); border: 2px solid var(--border); border-radius: 0px; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); }
+        .highlight-box { background: var(--secondary); border: 2px solid var(--border); border-left: 6px solid var(--border); padding: 20px; margin: 20px 0; box-shadow: 2px 2px 0px 0px rgba(10,10,10,1); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid var(--border); }
+        th, td { padding: 12px; border: 1.5px solid var(--border); text-align: left; }
+        th { background: var(--secondary); font-family: monospace; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+        h2 { color: var(--white); margin-top: 30px; border-bottom: 2px solid var(--border); padding-bottom: 8px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 0.1em; }
+        .tag { background: var(--secondary); border: 1.5px solid var(--border); padding: 4px 10px; border-radius: 0px; font-size: 0.75rem; font-family: monospace; font-weight: 600; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <header><h1>Patient Data Cleanup & Quality Tool</h1></header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="highlight-box">
+            <strong>Business Impact:</strong> Automated hospital record remediation and imputation, elevating clinical dataset integrity to ensure fully compliant, audit-ready medical reporting.
+        </div>
+
+        <p>
+            <span class="tag">Python</span>
+            <span class="tag">Data Imputation</span>
+            <span class="tag">Healthcare Analytics</span>
+            <span class="tag">Data Cleaning</span>
+        </p>
+
+        <h2>The "What": Technical Methodology</h2>
+        <p>Using Python and specialized data-cleaning pipelines, this system ingests raw, disparate hospital records, identifies structural inconsistencies, handles missing observations through robust imputation techniques, and standardizes formats for clinical deployment.</p>
+        
+        <table>
+            <tr><th>Pipeline Phase</th><th>Operational Goal</th></tr>
+            <tr><td>Anomaly & Missingness Check</td><td>Isolate corrupted entries and missing clinical variables</td></tr>
+            <tr><td>Automated Imputation</td><td>Safely populate gaps while preserving statistical distribution</td></tr>
+        </table>
+
+        <h2>The "Why": Data Integrity Impact</h2>
+        <p>In healthcare analytics, flawed inputs create dangerous reporting discrepancies. Implementing strict data validation and cleaning automation ensures that clinical dashboards and medical researchers draw conclusions from pristine, reliable records.</p>
+
+        <a href="projects.html" style="display: inline-block; margin-top: 30px; color: var(--white); text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 2px solid var(--border);">← Back to Portfolio</a>
+    </div>
+</body>
+</html>
