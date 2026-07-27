@@ -29,6 +29,8 @@
         .project-card { background: var(--secondary); border: 1px solid var(--border); padding: 20px; border-radius: 2px; transition: border-color 0.2s; }
         .project-card:hover { border-color: var(--accent); }
         .project-card h3 { color: var(--white); margin-top: 0; font-size: 1rem; letter-spacing: 0.05em; }
+        .project-card h3 a { color: var(--white); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+        .project-card h3 a:hover { color: var(--accent); border-bottom: 1px solid var(--accent); }
         .project-card p { color: var(--muted); font-size: 0.85rem; margin-bottom: 15px; }
         .tech-tag { display: inline-block; background: #161616; border: 1px solid var(--border); color: var(--text); padding: 2px 8px; border-radius: 2px; font-size: 0.7rem; font-family: monospace; margin-right: 4px; margin-bottom: 4px; }
         .portfolio-link { color: var(--white); text-decoration: none; border-bottom: 1px dotted var(--accent); font-weight: 500; }
@@ -60,69 +62,21 @@
         
         <h2>Key Repositories & Highlights</h2>
         <p>Featured projects directly synced from your technical portfolio:</p>
-        
+
         <div class="project-grid">
             <div class="project-card">
-                <h3>viceversa</h3>
-                <p>High-fidelity administrative suite and asset registry. Accredited strictly for blockchain identity, verifiable state management, and immutable audit trails.</p>
+                <h3><a href="VICEVERSA Archival Registry Deep Dive.html">VICEVERSA Archival Registry</a></h3>
+                <p>High-fidelity administrative suite and asset registry featuring blockchain identity, verifiable state management, and immutable audit trails.</p>
                 <div>
                     <span class="tech-tag">TypeScript</span>
                     <span class="tech-tag">Turbopack</span>
-                    <span class="tech-tag">Blockchain Identity</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>mosaik</h3>
-                <p>Advanced TypeScript core framework engineered for high-concurrency state mapping and modular UI architecture.</p>
-                <div>
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">Architecture</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>use-OMNISCIENT_</h3>
-                <p>High-fidelity spatial data provenance engine for C2PA-compliant archival registries featuring glassmorphic UI architecture.</p>
-                <div>
-                    <span class="tech-tag">Python</span>
                     <span class="tech-tag">C2PA</span>
-                    <span class="tech-tag">Spatial Data</span>
                 </div>
             </div>
 
             <div class="project-card">
-                <h3>Diabetes Clinical Pipeline</h3>
-                <p>Automated Python pipeline for clinical data remediation, MICE/KNN imputation, and multi-dimensional quality assessment.</p>
-                <div>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">MICE/KNN</span>
-                    <span class="tech-tag">Clinical Informatics</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Data-Integrity-Sentinel</h3>
-                <p>Rigorous type-safe validation layer ensuring constant state compliance across institutional registry feeds.</p>
-                <div>
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">Validation</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>eng-signal-extractor</h3>
-                <p>Automated tool for high-precision extraction and heuristic highlighting of engineering specifications in complex PDFs.</p>
-                <div>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">PyMuPDF</span>
-                    <span class="tech-tag">Heuristics</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>LA Equity Resource Allocation</h3>
-                <p>Analytical model leveraging U.S. Census data to generate equity priority scores for Los Angeles County funding decisions.</p>
+                <h3><a href="Geospatial Sentinel Dashboard.html">Geospatial Sentinel Dashboard</a></h3>
+                <p>Advanced geospatial intelligence interface analyzing historical Census datasets while monitoring real-time data pipeline uptime.</p>
                 <div>
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Census Data</span>
@@ -131,20 +85,83 @@
             </div>
 
             <div class="project-card">
-                <h3>Sales Forecast Engine</h3>
-                <p>Time-series model utilizing Prophet to forecast retail demand, optimizing inventory and organizational staffing metrics.</p>
+                <h3><a href="Customer Retention Analysis.html">Customer Retention Analysis</a></h3>
+                <p>Predictive analytics framework isolating core behavioral churn indicators to empower teams and protect recurring revenue.</p>
+                <div>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Predictive Analytics</span>
+                    <span class="tech-tag">Retention</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="Patient Data Cleanup & Quality Tool.html">Patient Data Cleanup & Quality Tool</a></h3>
+                <p>Automated hospital record remediation and MICE/KNN imputation pipeline ensuring audit-ready medical reporting.</p>
+                <div>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Clinical Data</span>
+                    <span class="tech-tag">Imputation</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="Community Resource & Funding Tool.html">Community Resource & Funding Tool</a></h3>
+                <p>Analytical GIS dashboard processing U.S. Census metrics to provide equitable priority scores for public funding allocations.</p>
+                <div>
+                    <span class="tech-tag">Mapping Data</span>
+                    <span class="tech-tag">Public Policy</span>
+                    <span class="tech-tag">Census</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="Customer Feedback Sentiment Analyzer.html">Customer Feedback Sentiment Analyzer</a></h3>
+                <p>Advanced natural language processing pipeline leveraging neural networks to score brand perception and surface satisfaction shifts.</p>
+                <div>
+                    <span class="tech-tag">Neural Networks</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">TensorFlow</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="Structured Database Design.html">Structured Database Design</a></h3>
+                <p>Optimized relational database schemas and normalization structures engineered to protect sensitive records and speed up reporting.</p>
+                <div>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Architecture</span>
+                    <span class="tech-tag">Normalization</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3><a href="Sales Forecast Engine.html">Sales Forecast Engine</a></h3>
+                <p>Time-series forecasting model utilizing Prophet to predict retail demand patterns, optimizing inventory and staffing.</p>
                 <div>
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Prophet</span>
                     <span class="tech-tag">Time Series</span>
                 </div>
             </div>
+
+            <div class="project-card">
+                <h3><a href="Fraud Detection.html">Fraud Detection Model</a></h3>
+                <p>Real-time classification algorithms designed to identify anomalous transaction patterns and safeguard institutional assets.</p>
+                <div>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Risk Analytics</span>
+                </div>
+            </div>
         </div>
 
-        <p style="margin-top: 30px; text-align: center;"><em>Explore full project documentation in the <a href="projects.html" class="portfolio-link">Portfolio</a> section.</em></p>
+        <p style="margin-top: 30px; text-align: center;">
+            <em>Explore full project documentation in the</em> <a href="projects.html" class="portfolio-link">Portfolio</a> <em>section.</em>
+        </p>
     </div>
+
     <footer>
-        <p>&copy; 2026 Ashley Love | Lead UI Engineer &middot; Data Scientist | Rancho Palos Verdes, CA</p>
+        &copy; 2026 Ashley Love | Lead UI Engineer &middot; Data Scientist | Rancho Palos Verdes, CA
     </footer>
 </body>
 </html>
