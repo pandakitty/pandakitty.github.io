@@ -5,29 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Ashley Love</title>
     <style>
-        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
+        :root { 
+            --primary: #0A0A0A; 
+            --secondary: #121212; 
+            --accent: #C0C0C0; 
+            --bg: #0A0A0A; 
+            --text: #E0E0E0; 
+            --muted: #888888;
+            --white: #FFFFFF; 
+            --border: #2A2A2A;
+        }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
-        header { background: var(--primary); color: var(--white); padding: 60px 20px; text-align: center; }
-        nav { background: var(--white); padding: 1rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
-        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
+        header { background: var(--secondary); border-bottom: 1px solid var(--border); color: var(--white); padding: 60px 20px; text-align: center; }
+        header h1 { letter-spacing: 0.1em; font-weight: 800; margin: 0 0 10 px 0; }
+        header p { color: var(--muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.25em; margin: 0; }
+        nav { background: var(--secondary); border-bottom: 1px solid var(--border); padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text); transition: color 0.2s; }
+        nav a:hover { color: var(--white); }
         .container { max-width: 900px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
-        .profile-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; }
-        .profile-img-large { width: 100%; border-radius: 8px; margin-bottom: 15px; display: block; }
-        .bio-content h2 { color: var(--primary); margin-top: 0; }
-        .bio-content h3 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 30px; }
-        .skill-tag { display: inline-block; background: #ebf8ff; color: #2b6cb0; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin: 4px; }
-        .cv-button { display: block; margin-top: 20px; padding: 12px; background: var(--primary); color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
+        .profile-card { background: var(--secondary); border: 1px solid var(--border); padding: 25px; border-radius: 4px; text-align: center; }
+        .profile-card h3 { color: var(--white); margin-bottom: 5px; letter-spacing: 0.05em; }
+        .profile-card p { color: var(--muted); font-size: 0.85rem; margin-top: 0; }
+        .profile-img-large { width: 100%; border-radius: 2px; margin-bottom: 15px; display: block; filter: grayscale(20%); }
+        .bio-content h2 { color: var(--white); margin-top: 0; letter-spacing: 0.05em; font-size: 1.5rem; }
+        .bio-content h3 { color: var(--white); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 30px; letter-spacing: 0.05em; font-size: 1.1rem; }
+        .bio-content p { color: var(--text); font-size: 0.95rem; }
+        .skill-tag { display: inline-block; background: #161616; border: 1px solid var(--border); color: var(--text); padding: 4px 12px; border-radius: 2px; font-size: 0.75rem; font-family: monospace; letter-spacing: 0.05em; margin: 4px; }
+        .cv-button { display: block; margin-top: 20px; padding: 12px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 2px; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; transition: background 0.2s; }
+        .cv-button:hover { background: var(--accent); }
         .contact-list { list-style: none; padding: 0; }
-        .contact-list li { margin-bottom: 10px; }
-        .contact-link { color: var(--accent); text-decoration: none; font-weight: bold; }
-        .contact-link:hover { text-decoration: underline; }
-        footer { background: var(--primary); padding: 30px; text-align: center; font-size: 0.9rem; color: #cbd5e0; margin-top: 60px; }
+        .contact-list li { margin-bottom: 10px; font-size: 0.9rem; }
+        .contact-list strong { color: var(--white); }
+        .contact-link { color: var(--white); text-decoration: none; font-weight: 500; border-bottom: 1px dotted var(--accent); }
+        .contact-link:hover { color: var(--accent); border-bottom: 1px solid var(--accent); }
+        footer { background: var(--secondary); border-top: 1px solid var(--border); padding: 30px; text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 60px; letter-spacing: 0.05em; }
     </style>
 </head>
 <body>
     <header>
         <h1>About Me</h1>
-        <p>Data Science & Business Analytics Professional</p>
+        <p>Lead UI Engineer &middot; Data Scientist &middot; Business Analytics</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -44,25 +61,33 @@
         </div>
         <div class="bio-content">
             <h2>Professional Narrative</h2>
-            <p>I am a Data Science and Business Analytics professional dedicated to transforming complex, high-stakes datasets into actionable strategic intelligence. With a foundational background in healthcare, I apply a <strong>"zero-discrepancy" mindset</strong> to data engineering, predictive modeling, and machine learning deployment.</p>
+            <p>I am a Lead UI Engineer, Data Scientist, and Business Analytics professional holding a B.S. in Data Science with concurrent focus in Business Analytics from Bellevue University. I specialize in institutional registry architecture, high-fidelity user interfaces, and robust, production-level data engineering pipelines.</p>
             
-            <p>My career is built on the belief that data is most powerful when it is both high-fidelity and interpretable. I specialize in bridging the gap between raw statistical analysis and executive decision-making—whether architecting normalized SQL databases, engineering deep learning pipelines, or deploying full-stack analytical tools via Flask.</p>
+            <p>My work bridges raw algorithmic telemetry and executive-level strategic intelligence—ranging from automated clinical data remediation and geospatial census analytics to decentralized blockchain verification and high-performance TypeScript UI systems.</p>
 
             <h3>Core Technical Competencies</h3>
             <div class="skills-grid">
-                <span class="skill-tag">Python (Scikit-Learn, Pandas)</span>
-                <span class="skill-tag">Deep Learning (TensorFlow, Keras, LSTMs)</span>
-                <span class="skill-tag">SQL (3NF Schema Design & Architecture)</span>
-                <span class="skill-tag">Time-Series (Facebook Prophet)</span>
-                <span class="skill-tag">Web Deployment (Flask, HTML/CSS)</span>
-                <span class="skill-tag">Business Intelligence & KPI Modeling</span>
-                <span class="skill-tag">Data Visualization (Tableau, Plotly, Seaborn)</span>
-                <span class="skill-tag">Healthcare Informatics (MICE Imputation, ICD-9)</span>
+                <span class="skill-tag">Data Science & ML (scikit-learn, Prophet, XGBoost)</span>
+                <span class="skill-tag">Business Intelligence & Predictive Modeling</span>
+                <span class="skill-tag">TypeScript & Next.js / Turbopack</span>
+                <span class="skill-tag">Python & Automated Data Pipelines</span>
+                <span class="skill-tag">Blockchain Identity & C2PA Standards</span>
+                <span class="skill-tag">SQL & Relational Schema Design</span>
+                <span class="skill-tag">Geospatial & Census Data Analysis</span>
+                <span class="skill-tag">Tailwind CSS & UI Architecture</span>
             </div>
 
             <h3>Connect With Me</h3>
-            <p>I am always open to discussing data-driven strategies, business intelligence, or potential collaborations. Feel free to reach out through the following channels:</p>
+            <p>Open to high-impact technical discussions, architecture reviews, and advanced engineering collaborations:</p>
             <ul class="contact-list">
                 <li><strong>Email:</strong> <a href="mailto:ashelove6969@gmail.com" class="contact-link">ashelove6969@gmail.com</a></li>
                 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ashe-love/" class="contact-link" target="_blank">linkedin.com/in/ashe-love</a></li>
                 <li><strong>GitHub:</strong> <a href="https://github.com/pandakitty" class="contact-link" target="_blank">github.com/pandakitty</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Ashley Love. All rights reserved.</p>
+    </footer>
+</body>
+</html>
