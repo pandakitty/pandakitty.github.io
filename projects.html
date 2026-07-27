@@ -30,12 +30,16 @@
         .project-card { background: var(--primary); border: 2px solid var(--border); padding: 25px; border-radius: 0px; display: flex; flex-direction: column; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); transition: transform 0.2s, box-shadow 0.2s; }
         .project-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px 0px rgba(10,10,10,1); }
         .project-card h3 { color: var(--white); margin-top: 0; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; }
+        .project-card h3 a { color: var(--white); text-decoration: none; border-bottom: 1px dotted var(--accent); transition: color 0.2s; }
+        .project-card h3 a:hover { color: var(--accent); border-bottom: 1px solid var(--accent); }
         .project-card p { color: var(--text); font-size: 0.9rem; margin-bottom: 15px; }
         .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
         .tech-tag { background: var(--secondary); border: 1.5px solid var(--border); color: var(--text); padding: 3px 8px; border-radius: 0px; font-size: 0.7rem; font-family: monospace; letter-spacing: 0.05em; }
         .impact-text { color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-top: auto; margin-bottom: 15px; letter-spacing: 0.05em; }
-        .btn { display: inline-block; padding: 10px 20px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 0px; border: 2px solid var(--border); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; text-align: center; transition: all 0.2s; }
+        .btn-group { display: flex; gap: 10px; margin-top: auto; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 10px 16px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 0px; border: 2px solid var(--border); font-weight: bold; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; text-align: center; transition: all 0.2s; flex: 1; min-width: 120px; }
         .btn:hover { background: var(--accent); color: var(--primary); transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px rgba(10,10,10,1); }
+        .btn-secondary { background: var(--secondary); color: var(--white); }
         footer { background: var(--secondary); border-top: 2px solid var(--border); padding: 40px; text-align: center; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 60px; }
     </style>
 </head>
@@ -57,98 +61,129 @@
             
             <!-- 1. VICEVERSA -->
             <div class="project-card">
-                <h3>Secure Document & Asset Registry</h3>
+                <h3><a href="VICEVERSA Archival Registry Deep Dive.html">Secure Document & Asset Registry</a></h3>
                 <p>An administrative system built to ensure complete transparency, security, and verified tracking for sensitive business records and digital files.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">TypeScript</span>
                     <span class="tech-tag">Secure Records</span>
                 </div>
                 <p class="impact-text">Result: Tamper-proof tracking and audit readiness</p>
-                <a href="https://github.com/pandakitty" target="_blank" class="btn">View Repository</a>
-            </div>
-
-            <!-- 2. Mosaik -->
-            <div class="project-card">
-                <h3>Interactive Dashboard Framework</h3>
-                <p>A modular system designed to keep multi-user platforms and business interfaces synchronized in real-time without lagging or data drops.</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">UI Design</span>
+                <div class="btn-group">
+                    <a href="VICEVERSA Archival Registry Deep Dive.html" class="btn btn-secondary">Deep Dive</a>
+                    <a href="https://github.com/pandakitty" target="_blank" class="btn">Repository</a>
                 </div>
-                <p class="impact-text">Result: Smooth, unified user experience</p>
-                <a href="https://github.com/pandakitty" target="_blank" class="btn">View Repository</a>
             </div>
 
-            <!-- 3. use-OMNISCIENT -->
+            <!-- 2. Patient Data Cleanup Pipeline -->
             <div class="project-card">
-                <h3>Location & Mapping Verification Engine</h3>
-                <p>A specialized tracking tool built to trace the origin, history, and exact mapping coordinates of spatial and geographic business data.</p>
+                <h3><a href="Patient Data Cleanup & Quality Tool.html">Patient Data Cleanup & Quality Tool</a></h3>
+                <p>Automated hospital record remediation and imputation, elevating clinical dataset integrity to ensure fully compliant, audit-ready medical reporting.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Data Imputation</span>
+                    <span class="tech-tag">Healthcare Analytics</span>
+                </div>
+                <p class="impact-text">Result: 25% boost in overall data quality & audit readiness</p>
+                <div class="btn-group">
+                    <a href="Patient Data Cleanup & Quality Tool.html" class="btn btn-secondary">Deep Dive</a>
+                    <a href="https://github.com/pandakitty" target="_blank" class="btn">Repository</a>
+                </div>
+            </div>
+
+            <!-- 3. LA Equity Resource Allocation -->
+            <div class="project-card">
+                <h3><a href="Community Resource & Funding Tool.html">Community Resource & Funding Tool</a></h3>
+                <p>Processed and visualized local census datasets to provide civic leaders with empirical insights, enabling transparent, equitable resource distribution.</p>
+                <div class="tech-tags">
                     <span class="tech-tag">Mapping Data</span>
-                </div>
-                <p class="impact-text">Result: Absolute clarity on data origins</p>
-                <a href="https://github.com/pandakitty" target="_blank" class="btn">View Repository</a>
-            </div>
-
-            <!-- 4. Diabetes Clinical Pipeline -->
-            <div class="project-card">
-                <h3>Patient Data Cleanup & Quality Tool</h3>
-                <p>An automated system that cleans up messy hospital records, fills in missing information accurately, and checks overall data health.</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Healthcare Quality</span>
-                </div>
-                <p class="impact-text">Result: 25% boost in overall data quality</p>
-                <a href="https://github.com/pandakitty" target="_blank" class="btn">View Repository</a>
-            </div>
-
-            <!-- 5. Data-Integrity-Sentinel -->
-            <div class="project-card">
-                <h3>Automated System Health Monitor</h3>
-                <p>A background watchdog that continuously checks incoming business feeds to ensure numbers match up and nothing gets corrupted.</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">System Health</span>
-                </div>
-                <p class="impact-text">Result: Near-perfect data accuracy (99.9%)</p>
-                <a href="https://github.com/pandakitty" target="_blank" class="btn">View Repository</a>
-            </div>
-
-            <!-- 6. Engineering Signal Extractor -->
-            <div class="project-card">
-                <h3>Document & Specification Reader</h3>
-                <p>An automated assistant that scans long technical PDF documents, quickly pulling out key details and specifications so teams don't have to search manually.</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Document Scanning</span>
-                </div>
-                <p class="impact-text">Result: Faster review times for complex paperwork</p>
-                <a href="https://github.com/pandakitty" target="_blank" class="btn">View Repository</a>
-            </div>
-
-            <!-- 7. LA Equity Resource Allocation -->
-            <div class="project-card">
-                <h3>Community Resource Funding Tool</h3>
-                <p>An analytical model that reviews local census data to help local governments make fair, data-backed decisions on where to invest funding.</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
                     <span class="tech-tag">Public Policy</span>
+                    <span class="tech-tag">Census Analysis</span>
                 </div>
-                <p class="impact-text">Result: Fair and equitable budget allocation</p>
-                <a href="https://github.com/pandakitty" target="_blank" class="btn">View Repository</a>
+                <p class="impact-text">Result: Fair and equitable public funding allocations</p>
+                <div class="btn-group">
+                    <a href="Community Resource & Funding Tool.html" class="btn btn-secondary">Deep Dive</a>
+                    <a href="https://github.com/pandakitty" target="_blank" class="btn">Repository</a>
+                </div>
             </div>
 
-            <!-- 8. E-Commerce Sales Forecast -->
+            <!-- 4. Customer Feedback Sentiment Analyzer -->
             <div class="project-card">
-                <h3>Sales & Demand Forecasting Tool</h3>
-                <p>A predictive tool that forecasts future retail demand based on past trends, helping businesses manage inventory levels and staff scheduling efficiently.</p>
+                <h3><a href="Customer Feedback Sentiment Analyzer.html">Customer Feedback Sentiment Analyzer</a></h3>
+                <p>Automated qualitative customer feedback processing to surface customer satisfaction shifts weeks faster than manual reviews.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Neural Networks</span>
+                    <span class="tech-tag">Text Analysis</span>
+                    <span class="tech-tag">NLP</span>
+                </div>
+                <p class="impact-text">Result: 88% F1 Score & immediate customer insight scaling</p>
+                <div class="btn-group">
+                    <a href="Customer Feedback Sentiment Analyzer.html" class="btn btn-secondary">Deep Dive</a>
+                    <a href="https://github.com/pandakitty" target="_blank" class="btn">Repository</a>
+                </div>
+            </div>
+
+            <!-- 5. Geospatial Sentinel Dashboard -->
+            <div class="project-card">
+                <h3><a href="Geospatial Sentinel Dashboard.html">Geospatial Sentinel Dashboard</a></h3>
+                <p>Engineered a real-time geospatial analytics dashboard to process historical Census datasets and monitor data pipeline uptime.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Geospatial Analytics</span>
+                    <span class="tech-tag">Census Data</span>
+                    <span class="tech-tag">Pipeline Uptime</span>
+                </div>
+                <p class="impact-text">Result: Continuous operational reliability & spatial intelligence</p>
+                <div class="btn-group">
+                    <a href="Geospatial Sentinel Dashboard.html" class="btn btn-secondary">Deep Dive</a>
+                    <a href="https://github.com/pandakitty" target="_blank" class="btn">Repository</a>
+                </div>
+            </div>
+
+            <!-- 6. Structured Database Design -->
+            <div class="project-card">
+                <h3><a href="Structured Database Design.html">Structured Database Design</a></h3>
+                <p>Architected optimized relational database schemas and normalization structures to protect sensitive company records.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Database Architecture</span>
+                    <span class="tech-tag">Relational Design</span>
+                </div>
+                <p class="impact-text">Result: Absolute data consistency & rapid reporting speeds</p>
+                <div class="btn-group">
+                    <a href="Structured Database Design.html" class="btn btn-secondary">Deep Dive</a>
+                    <a href="https://github.com/pandakitty" target="_blank" class="btn">Repository</a>
+                </div>
+            </div>
+
+            <!-- 7. Sales Forecast Engine -->
+            <div class="project-card">
+                <h3><a href="Sales Forecast Engine.html">Sales Forecast Engine</a></h3>
+                <p>Implemented time-series forecasting models to predict retail demand patterns, optimizing inventory and staffing overhead.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Forecasting</span>
+                    <span class="tech-tag">Prophet</span>
+                    <span class="tech-tag">Time Series</span>
                 </div>
-                <p class="impact-text">Result: Smarter inventory and staffing decisions</p>
-                <a href="https://github.com/pandakitty" target="_blank" class="btn">View Repository</a>
+                <p class="impact-text">Result: Smarter inventory management & reduced overhead</p>
+                <div class="btn-group">
+                    <a href="Sales Forecast Engine.html" class="btn btn-secondary">Deep Dive</a>
+                    <a href="https://github.com/pandakitty" target="_blank" class="btn">Repository</a>
+                </div>
+            </div>
+
+            <!-- 8. Fraud Detection Model -->
+            <div class="project-card">
+                <h3><a href="Fraud Detection Model.html">Fraud Detection Model</a></h3>
+                <p>Deployed advanced classification algorithms to identify anomalous transaction patterns in real-time and safeguard assets.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Risk Analytics</span>
+                </div>
+                <p class="impact-text">Result: Proactive defense against illicit financial exposure</p>
+                <div class="btn-group">
+                    <a href="Fraud Detection Model.html" class="btn btn-secondary">Deep Dive</a>
+                    <a href="https://github.com/pandakitty" target="_blank" class="btn">Repository</a>
+                </div>
             </div>
 
         </div>
