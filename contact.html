@@ -25,14 +25,20 @@
         .container h2 { color: var(--white); letter-spacing: 0.1em; margin-top: 0; text-transform: uppercase; font-size: 1.2rem; }
         .container p { color: var(--muted); font-size: 0.9rem; letter-spacing: 0.05em; }
         
+        /* Form Styles */
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; font-size: 0.75rem; text-transform: uppercase; font-family: monospace; margin-bottom: 5px; color: var(--text); font-weight: bold; }
+        .form-control { width: 100%; padding: 12px; background: var(--secondary); border: 1.5px solid var(--border); font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text); outline: none; box-sizing: border-box; }
+        .form-control:focus { border-color: var(--accent); }
+
         /* Hard-edged Obsidian Button Styles */
-        .btn { display: inline-block; margin: 10px; padding: 14px 24px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 0px; border: 2px solid var(--border); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; transition: all 0.2s; }
-        .btn:hover { background: var(--accent); color: var(--primary); transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px rgba(10,10,10,1); }
-        .btn-outline { background: transparent; border: 2px solid var(--border); color: var(--white); }
-        .btn-outline:hover { background: var(--white); color: var(--primary); }
+        .btn { display: inline-block; margin: 10px 0; padding: 14px 24px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 0px; border: 2px solid var(--border); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; transition: all 0.2s; cursor: pointer; width: 100%; box-sizing: border-box; box-shadow: 3px 3px 0px 0px rgba(85,85,85,1); }
+        .btn:hover { background: var(--accent); color: var(--primary); transform: translate(-2px, -2px); box-shadow: 5px 5px 0px 0px rgba(10,10,10,1); }
+        .btn-outline { background: transparent; border: 2px solid var(--border); color: var(--white); box-shadow: none; }
+        .btn-outline:hover { background: var(--white); color: var(--primary); box-shadow: 3px 3px 0px 0px rgba(10,10,10,1); }
         
         .button-stack { display: flex; flex-direction: column; gap: 14px; align-items: center; margin-top: 30px; }
-        .fixed-width { width: 280px; }
+        .fixed-width { width: 100%; max-width: 280px; }
     </style>
 </head>
 <body>
@@ -48,17 +54,32 @@
         <h2>Let's Connect</h2>
         <p>Seeking Lead UI Engineering & Data Science Opportunities for 2026</p>
         
-        <a href="mailto:ashelove6969@gmail.com" class="btn fixed-width">📧 Email Me</a>
+        <!-- Direct Message Form -->
+        <form action="https://formspree.io/f/your-form-id" method="POST" style="margin-top: 30px; text-align: left;">
+            <div class="form-group">
+                <label>Your Email</label>
+                <input type="email" name="email" required class="form-control" placeholder="recruiter@company.com">
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" rows="4" required class="form-control" placeholder="Let's discuss a Lead UI / Data Science role..." style="resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                Send Message &rarr;
+            </button>
+        </form>
         
         <div class="button-stack">
-            <a href="./files/Ashley_Love_Resume.pdf" target="_blank" class="btn btn-outline fixed-width">📄 Download Resume (PDF)</a>
+            <a href="ashley_love_RESUME.pdf" target="_blank" class="btn btn-outline fixed-width" style="text-align: center;">📄 Download Resume (PDF)</a>
             
-            <a href="https://linkedin.com/in/ashe-love/" target="_blank" class="btn btn-outline fixed-width">🔗 LinkedIn Profile</a>
+            <a href="https://linkedin.com/in/ashe-love/" target="_blank" class="btn btn-outline fixed-width" style="text-align: center;">🔗 LinkedIn Profile</a>
             
-            <a href="https://github.com/pandakitty" target="_blank" class="btn btn-outline fixed-width">💻 GitHub Portfolio</a>
+            <a href="https://github.com/pandakitty" target="_blank" class="btn btn-outline fixed-width" style="text-align: center;">💻 GitHub Portfolio</a>
         </div>
 
-        <p style="margin-top: 35px; font-size: 0.8rem; color: var(--muted); border-top: 2px solid var(--border); padding-top: 20px; letter-spacing: 0.1em; text-transform: uppercase;">
+        <p style="margin-top: 35px; font-size: 0.8rem; color: var(--muted); border-top: 2px solid var(--border); padding-top: 20px; letter-spacing: 0.1em; text-transform: uppercase; text-align: center;">
             Direct Email: <strong style="color: var(--white);">ashelove6969@gmail.com</strong>
         </p>
     </div>
