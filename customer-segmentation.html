@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segmentation | Ashley Love</title>
+    <title>Customer Segmentation Deep Dive | Ashley Love</title>
     <style>
-        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
+        :root { 
+            --primary: #FAFAFA; 
+            --secondary: #F0F0F0; 
+            --accent: #555555; 
+            --bg: #FAFAFA; 
+            --text: #333333; 
+            --muted: #666666;
+            --white: #0A0A0A; 
+            --border: #0A0A0A;
+        }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
-        header { background: var(--primary); color: var(--white); padding: 40px 20px; text-align: center; }
-        nav { background: var(--white); padding: 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
-        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .highlight-box { background: #f1f5f9; border-left: 6px solid var(--accent); padding: 20px; margin: 20px 0; }
-        h2 { color: var(--primary); margin-top: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 5px; }
-        .tag { background: #e2e8f0; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 5px; }
+        header { background: var(--secondary); color: var(--white); padding: 50px 20px; text-align: center; border-bottom: 2px solid var(--border); }
+        header h1 { font-size: 1.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin: 0; }
+        nav { background: var(--secondary); padding: 1rem; text-align: center; border-bottom: 2px solid var(--border); }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text); }
+        nav a:hover { color: var(--white); }
+        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: var(--primary); border: 2px solid var(--border); border-radius: 0px; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); }
+        .highlight-box { background: var(--secondary); border: 2px solid var(--border); border-left: 6px solid var(--border); padding: 20px; margin: 20px 0; box-shadow: 2px 2px 0px 0px rgba(10,10,10,1); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid var(--border); }
+        th, td { padding: 12px; border: 1.5px solid var(--border); text-align: left; }
+        th { background: var(--secondary); font-family: monospace; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+        h2 { color: var(--white); margin-top: 30px; border-bottom: 2px solid var(--border); padding-bottom: 8px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 0.1em; }
+        .tag { background: var(--secondary); border: 1.5px solid var(--border); padding: 4px 10px; border-radius: 0px; font-size: 0.75rem; font-family: monospace; font-weight: 600; margin-right: 5px; }
     </style>
 </head>
 <body>
-    <header><h1>RFM Customer Segmentation</h1></header>
+    <header><h1>Customer Value & Activity Analyzer</h1></header>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -26,27 +40,29 @@
     </nav>
     <div class="container">
         <div class="highlight-box">
-            <strong>Key Achievement:</strong> Leveraged K-Means clustering to identify high-value "Champion" segments, providing a roadmap for 20% more efficient ad spend.
+            <strong>Business Impact:</strong> Leveraged K-Means clustering and RFM analysis to identify high-value customer segments, enabling targeted marketing campaigns and personalized engagement that increased retention ROI.
         </div>
 
         <p>
             <span class="tag">Python</span>
-            <span class="tag">Scikit-Learn</span>
             <span class="tag">K-Means Clustering</span>
+            <span class="tag">RFM Analysis</span>
+            <span class="tag">Customer Segmentation</span>
         </p>
 
-        <h2>Strategy & Analysis</h2>
-        <p>This project involved segmenting 10,000+ customers based on Recency, Frequency, and Monetary (RFM) scores to optimize marketing ROI.</p>
-
         <h2>The "What": Technical Methodology</h2>
-        <p>The technical core of this project utilized **K-Means Clustering**, an unsupervised machine learning algorithm. After calculating individual RFM scores from raw transaction logs, I standardized the data to ensure equal weighting. I then used the **Elbow Method** and **Silhouette Analysis** to determine the optimal number of clusters. This resulted in five distinct personas—ranging from "Loyal Champions" to "Hibernating Customers"—allowing for precision targeting in promotional campaigns.</p>
-
+        <p>Using Python and unsupervised learning techniques, I built a behavioral segmentation model utilizing **RFM (Recency, Frequency, Monetary)** scoring combined with **K-Means clustering**. This approach groups customers based on their exact transaction habits—highlighting how recently they bought, how often they engage, and total monetary contribution—without manual categorization overhead.</p>
         
+        <table>
+            <tr><th>Segment Metric</th><th>Strategic Focus</th></tr>
+            <tr><td>High-Value Champions</td><td>VIP rewards, early access, and loyalty programs</td></tr>
+            <tr><td>At-Risk Accounts</td><td>Automated re-engagement and targeted incentives</td></tr>
+        </table>
 
-        <h2>The "Why": Data Science Impact</h2>
-        <p>This project bridges the gap between raw behavioral data and business strategy. In Data Science, our goal is to drive actionable insights. By moving beyond aggregate averages and looking at specific user clusters, I empower a business to personalize their engagement. This "Zero-Discrepancy" approach to customer behavior ensures that marketing resources are allocated to the segments with the highest potential Lifetime Value (LTV), directly improving the bottom line.</p>
+        <h2>The "Why": Business Analytics Impact</h2>
+        <p>Treating all customers uniformly wastes marketing budget and misses churn signals. By translating complex clustering outputs into distinct behavioral buckets, marketing and leadership teams can deploy precise campaigns that protect revenue and maximize lifetime value.</p>
 
-        <a href="index.html" style="display: inline-block; margin-top: 30px; color: var(--accent); text-decoration: none; font-weight: bold;">← Back to Portfolio Dashboard</a>
+        <a href="projects.html" style="display: inline-block; margin-top: 30px; color: var(--white); text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 2px solid var(--border);">← Back to Portfolio</a>
     </div>
 </body>
 </html>
