@@ -5,32 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Development | Ashley Love</title>
     <style>
-        :root { --primary: #0f172a; --accent: #3b82f6; --bg: #f8fafc; --text: #1e293b; --white: #ffffff; }
+        :root { 
+            --primary: #0A0A0A; 
+            --secondary: #121212; 
+            --accent: #C0C0C0; 
+            --bg: #0A0A0A; 
+            --text: #E0E0E0; 
+            --muted: #888888;
+            --white: #FFFFFF; 
+            --border: #2A2A2A;
+        }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
         
-        nav { background: var(--white); padding: 1.2rem; text-align: center; position: sticky; top: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; }
-        nav a { margin: 0 15px; text-decoration: none; font-weight: 500; color: var(--primary); transition: color 0.2s; }
-        nav a:hover { color: var(--accent); }
+        nav { background: var(--secondary); border-bottom: 1px solid var(--border); padding: 1.2rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text); transition: color 0.2s; }
+        nav a:hover { color: var(--white); }
 
-        header { background: var(--primary); color: var(--white); padding: 60px 20px; text-align: center; }
+        header { background: var(--secondary); border-bottom: 1px solid var(--border); color: var(--white); padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 2rem; letter-spacing: 0.1em; font-weight: 800; margin: 0 0 10px 0; }
+        header p { color: var(--muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.25em; margin: 0; }
         
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2.5fr; gap: 40px; align-items: start; flex: 1; }
-        .profile-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); text-align: center; position: sticky; top: 100px; }
-        .profile-img-large { width: 100%; border-radius: 8px; margin-bottom: 15px; display: block; object-fit: cover; border: 2px solid #e2e8f0; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2.5fr; gap: 40px; align-items: start; flex: 1; }
+        .profile-card { background: var(--secondary); border: 1px solid var(--border); padding: 25px; border-radius: 2px; text-align: center; position: sticky; top: 100px; }
+        .profile-img-large { width: 100%; border-radius: 2px; margin-bottom: 15px; display: block; object-fit: cover; border: 1px solid var(--border); filter: grayscale(20%); }
+        .profile-card h3 { color: var(--white); margin: 10px 0 5px 0; font-size: 1.1rem; letter-spacing: 0.05em; }
         
-        .content h2 { color: var(--primary); margin-top: 0; border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+        .content h2 { color: var(--white); font-size: 1.25rem; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 0; margin-bottom: 25px; }
         .project-list { margin-top: 30px; }
-        .project-item { background: white; padding: 25px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid var(--accent); box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .project-item h3 { margin-top: 0; color: var(--primary); font-size: 1.25rem; }
-        .tech-stack { display: flex; gap: 8px; margin: 15px 0; flex-wrap: wrap; }
-        .badge { background: #e2e8f0; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--primary); }
-        .project-link { font-size: 0.9rem; color: var(--accent); text-decoration: none; font-weight: bold; }
-        .project-link:hover { text-decoration: underline; }
+        .project-item { background: var(--secondary); border: 1px solid var(--border); padding: 25px; border-radius: 2px; margin-bottom: 20px; transition: border-color 0.2s; }
+        .project-item:hover { border-color: var(--accent); }
+        .project-item h3 { margin-top: 0; color: var(--white); font-size: 1.1rem; letter-spacing: 0.05em; }
+        .project-item p { color: var(--text); font-size: 0.9rem; margin-bottom: 15px; }
+        .tech-stack { display: flex; gap: 6px; margin: 15px 0; flex-wrap: wrap; }
+        .badge { background: #161616; border: 1px solid var(--border); color: var(--text); padding: 2px 8px; border-radius: 2px; font-size: 0.7rem; font-family: monospace; }
+        .project-link { font-size: 0.8rem; color: var(--white); text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px dotted var(--accent); }
+        .project-link:hover { color: var(--accent); border-bottom: 1px solid var(--accent); }
 
-        .contact-info { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.95rem; }
-        .contact-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .contact-info { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; font-size: 0.95rem; }
+        .contact-info a { color: var(--white); text-decoration: none; font-weight: 600; border-bottom: 1px dotted var(--accent); }
+        .contact-info a:hover { color: var(--accent); }
 
-        footer { background: var(--primary); padding: 40px; text-align: center; font-size: 0.85rem; color: #64748b; margin-top: 80px; }
+        footer { background: var(--secondary); border-top: 1px solid var(--border); padding: 40px; text-align: center; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.05em; margin-top: 80px; }
     </style>
 </head>
 <body>
@@ -44,128 +59,128 @@
     </nav>
 
     <header>
-        <h1>Technical Strategy & Development</h1>
-        <p>Data Science & Business Analytics Professional</p>
+        <h1>Technical Development & Strategy</h1>
+        <p>Data Science &middot; Business Analytics &middot; Practical Insights</p>
     </header>
 
     <div class="container">
         <div class="profile-card">
             <img src="profile.png" alt="Ashley Love" class="profile-img-large">
             <h3>Ashley Love</h3>
-            <p style="font-size: 0.9rem; color: #64748b;">Rancho Palos Verdes, Los Angeles</p>
-            <p style="font-size: 0.85rem;">Focus: Healthcare Informatics, Data Fidelity, & Machine Learning</p>
+            <p style="font-size: 0.85rem; color: var(--muted); margin: 5px 0;">Rancho Palos Verdes, Los Angeles</p>
+            <p style="font-size: 0.85rem; color: var(--text);">Focus: Healthcare Quality, Data Integrity, & Business Solutions</p>
         </div>
         
         <div class="content">
-            <h2>Technical Program Breadth</h2>
-            <p>I maintain end-to-end visibility of the data science lifecycle by applying a <strong>"zero-discrepancy" mindset</strong> to every stage of development—from raw clinical data remediation to the deployment of deep learning engines.</p>
+            <h2>Technical Strategy & Overview</h2>
+            <p>I build end-to-end data pipelines and analysis tools designed to turn messy, complex data into clear, actionable business insights—focusing on reliability, accuracy, and ease of use.</p>
 
             <div class="project-list">
                 
                 <div class="project-item">
-                    <h3>Automated Clinical Remediation Pipeline</h3>
-                    <p>Designed a modular Python pipeline to remediate missingness (97% weight data) and noise in the UCI Diabetes dataset. Preserved over 101,000 patient encounters while increasing the Data Quality Index (DQI) by 25%.</p>
+                    <h3>Patient Data Cleanup & Quality Tool</h3>
+                    <p>An automated system built to clean hospital records, accurately fill in missing health data, and improve overall dataset quality to support reliable medical reporting.</p>
                     <div class="tech-stack">
-                        <span class="badge">Python</span><span class="badge">MICE Imputation</span><span class="badge">Healthcare Informatics</span><span class="badge">RegEx</span>
+                        <span class="badge">Python</span><span class="badge">Data Imputation</span><span class="badge">Healthcare Analytics</span><span class="badge">Data Cleaning</span>
                     </div>
                     <a href="https://github.com/pandakitty/Diabetes_Clinical_Remediation_Pipeline" class="project-link">View Repository →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>LA Equity & Social Resource Allocation Model</h3>
-                    <p>Geospatial analysis framework synthesizing U.S. Census data to identify service deserts in Los Angeles. Built a custom Priority Score to guide equitable public funding decisions.</p>
+                    <h3>Community Resource & Funding Tool</h3>
+                    <p>A mapping and analysis tool that reviews local census data to help local leaders identify underserved neighborhoods and make fair, data-backed funding decisions.</p>
                     <div class="tech-stack">
-                        <span class="badge">GeoPandas</span><span class="badge">API Integration</span><span class="badge">Public Policy</span>
+                        <span class="badge">Mapping Data</span><span class="badge">Public Policy</span><span class="badge">Census Analysis</span>
                     </div>
                     <a href="https://github.com/pandakitty/LA-Equity-Resource-Allocation" class="project-link">View Map Project →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Deep Learning Sentiment Engine (LSTM)</h3>
-                    <p>Engineered a Long Short-Term Memory (LSTM) neural network for NLP sentiment classification. Improved accuracy by accounting for linguistic sequence and context in unstructured text data.</p>
+                    <h3>Customer Feedback Sentiment Analyzer</h3>
+                    <p>An advanced text-analysis tool that reads customer reviews and feedback to categorize overall sentiment and spot emerging consumer trends.</p>
                     <div class="tech-stack">
-                        <span class="badge">Deep Learning</span><span class="badge">TensorFlow/Keras</span><span class="badge">NLP</span>
+                        <span class="badge">Neural Networks</span><span class="badge">Text Analysis</span><span class="badge">Customer Insights</span>
                     </div>
                     <a href="https://github.com/pandakitty/lstm-sentiment.html" class="project-link">View Model Logic →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>3NF Relational Database Architecture</h3>
-                    <p>Strategic design of a normalized database schema (DSC-450) to ensure data integrity and referential consistency for high-volume enterprise reporting.</p>
+                    <h3>Structured Database Design</h3>
+                    <p>A clean, organized relational database structure built to protect sensitive company records and ensure fast, reliable business reporting.</p>
                     <div class="tech-stack">
-                        <span class="badge">SQL</span><span class="badge">3NF Normalization</span><span class="badge">Database Design</span>
+                        <span class="badge">SQL</span><span class="badge">Database Architecture</span><span class="badge">Data Organization</span>
                     </div>
                     <a href="https://github.com/pandakitty/sql-database-modeling.html" class="project-link">View Schema Design →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>E-Commerce Sales Forecasting & Segmentation</h3>
-                    <p>Coupled K-Means clustering with Facebook Prophet time-series models to predict retail demand trends and define high-value customer personas.</p>
+                    <h3>Sales & Demand Forecasting Tool</h3>
+                    <p>A predictive tool that forecasts future retail demand based on past trends, helping businesses manage inventory levels and staff scheduling efficiently.</p>
                     <div class="tech-stack">
-                        <span class="badge">Prophet</span><span class="badge">K-Means</span><span class="badge">Business Intelligence</span>
+                        <span class="badge">Forecasting</span><span class="badge">Customer Segmentation</span><span class="badge">Business Intelligence</span>
                     </div>
                     <a href="https://github.com/pandakitty/E-Commerce-Sales-Forecast" class="project-link">View Forecast Report →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Financial Fraud Detection (Imbalanced Data)</h3>
-                    <p>Developed a robust fraud detection framework utilizing SMOTE and precision-recall optimization to identify high-risk transactions in skewed financial datasets.</p>
+                    <h3>Financial Fraud Detection System</h3>
+                    <p>A security framework designed to spot unusual patterns and flag high-risk transactions in skewed financial datasets to prevent business losses.</p>
                     <div class="tech-stack">
-                        <span class="badge">SMOTE</span><span class="badge">Anomaly Detection</span><span class="badge">Financial Tech</span>
+                        <span class="badge">Anomaly Detection</span><span class="badge">Financial Security</span><span class="badge">Risk Analysis</span>
                     </div>
                     <a href="https://github.com/pandakitty/fraud-detection.html" class="project-link">View Security Logic →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Customer Churn Prediction Strategy</h3>
-                    <p>Classification framework (Logistic Regression & Gradient Boosting) used to quantify retention ROI by identifying at-risk users through behavioral patterns.</p>
+                    <h3>Customer Retention Analysis</h3>
+                    <p>An analytical model that helps businesses identify at-risk customers early, allowing teams to improve retention efforts and protect revenue.</p>
                     <div class="tech-stack">
-                        <span class="badge">Scikit-Learn</span><span class="badge">XGBoost</span><span class="badge">ROI Analysis</span>
+                        <span class="badge">Predictive Analytics</span><span class="badge">Customer Retention</span><span class="badge">ROI Analysis</span>
                     </div>
                     <a href="https://github.com/pandakitty/Customer-Churn-Analysis" class="project-link">View Churn Analysis →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Full-Stack Housing Predictor (Flask)</h3>
-                    <p>Live-deployable web application using Lasso Regression to provide real-time property estimates for the Anchorage housing market.</p>
+                    <h3>Property Value Estimator</h3>
+                    <p>An interactive web application that provides real-time property price estimates based on historical market data and housing features.</p>
                     <div class="tech-stack">
-                        <span class="badge">Flask</span><span class="badge">Regression Analysis</span><span class="badge">Deployment</span>
+                        <span class="badge">Web App</span><span class="badge">Price Modeling</span><span class="badge">Real Estate</span>
                     </div>
                     <a href="https://github.com/pandakitty/housing-eda.html" class="project-link">View Deployment →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Interactive Equity Performance Analysis</h3>
-                    <p>Visualizing market volatility and rolling financial averages using Plotly to create interactive, dynamic equity dashboards.</p>
+                    <h3>Interactive Financial Market Dashboard</h3>
+                    <p>A dynamic visual dashboard that tracks financial market trends, asset volatility, and performance metrics over time.</p>
                     <div class="tech-stack">
-                        <span class="badge">Plotly</span><span class="badge">Time-Series</span><span class="badge">Risk Metrics</span>
+                        <span class="badge">Interactive Visuals</span><span class="badge">Market Trends</span><span class="badge">Risk Metrics</span>
                     </div>
                     <a href="https://github.com/pandakitty/Financial-Time-Series-Analysis" class="project-link">View Dashboard →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>NLTK Sentiment Classification Pipeline</h3>
-                    <p>End-to-end NLP pipeline demonstrating raw text cleaning, tokenization, and sentiment classification using Python and NLTK.</p>
+                    <h3>Text Processing & Cleanup Pipeline</h3>
+                    <p>An automated pipeline that cleans, tokenizes, and organizes raw text data to prepare documents for clean, structured analysis.</p>
                     <div class="tech-stack">
-                        <span class="badge">NLTK</span><span class="badge">Preprocessing</span><span class="badge">Tokenization</span>
+                        <span class="badge">Text Processing</span><span class="badge">Data Cleanup</span><span class="badge">Tokenization</span>
                     </div>
                     <a href="https://github.com/pandakitty/sentiment_analysis_ipynb" class="project-link">View NLP Repo →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>Applied Data Science Visualizer (P1)</h3>
-                    <p>Statistical storytelling project focused on complex data distributions and visual forensics to identify data drift and statistical outliers.</p>
+                    <h3>Data Visualizer & Statistical Storyteller</h3>
+                    <p>An exploration project focused on uncovering data patterns, identifying statistical outliers, and communicating findings through clean charts.</p>
                     <div class="tech-stack">
-                        <span class="badge">Seaborn</span><span class="badge">Matplotlib</span><span class="badge">Data Forensics</span>
+                        <span class="badge">Data Visualization</span><span class="badge">Outlier Detection</span><span class="badge">Statistical Reporting</span>
                     </div>
                     <a href="https://github.com/pandakitty/P1-DataVisualizer-Applied-Data-Science" class="project-link">View Visuals →</a>
                 </div>
 
                 <div class="project-item">
-                    <h3>RFM Customer Analytics Engine</h3>
-                    <p>Implemented Recency, Frequency, and Monetary (RFM) analysis to segment customer bases into actionable personas for hyper-targeted marketing.</p>
+                    <h3>Customer Value & Activity Analyzer</h3>
+                    <p>A segmentation tool that groups customers based on how recently, frequently, and how much they buy, enabling targeted marketing campaigns.</p>
                     <div class="tech-stack">
-                        <span class="badge">RFM Analysis</span><span class="badge">Unsupervised Learning</span>
+                        <span class="badge">Customer Segmentation</span><span class="badge">Behavioral Analysis</span>
                     </div>
                     <a href="https://github.com/pandakitty/customer-segmentation.html" class="project-link">View Analysis →</a>
                 </div>
@@ -173,8 +188,8 @@
 
             <div class="contact-info">
                 <p>
-                    <a href="https://www.linkedin.com/in/ashe-love/" target="_blank">LinkedIn</a> • 
-                    <a href="https://github.com/pandakitty" target="_blank">GitHub</a> • 
+                    <a href="https://www.linkedin.com/in/ashe-love/" target="_blank">LinkedIn</a> &bull; 
+                    <a href="https://github.com/pandakitty" target="_blank">GitHub</a> &bull; 
                     <a href="mailto:ashelove6969@gmail.com">Professional Inquiry</a>
                 </p>
             </div>
