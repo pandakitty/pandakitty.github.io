@@ -213,11 +213,12 @@
         <div class="terminal-box">
             <div style="color: var(--muted); margin-bottom: 8px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;">// ROOT ACCESS: ASHLEY_LOVE_CORE_v2.6</div>
             <div id="terminal-output" style="min-height: 40px; font-size: 0.8rem; line-height: 1.4; margin-bottom: 8px;">
-                Type <span style="color: #FFF; background: #333; padding: 1px 4px;">help</span> to view system commands.
+                Type <span style="color: #00FF66; background: #222; padding: 1px 4px;">help</span> to view system commands.
             </div>
             <div style="display: flex; align-items: center; gap: 6px;">
                 <span style="color: #00FF66; font-size: 0.8rem;">guest@ashley-love:~$</span>
-                <input type="text" id="terminal-input" placeholder="try typing 'skills' or 'roi'..." style="background: transparent; border: none; color: #FFF; font-family: monospace; font-size: 0.8rem; outline: none; width: 100%;" onkeydown="handleTerminal(event)">
+                <!-- FIXED INPUT TEXT COLOR TO HIGH-CONTRAST NEON GREEN -->
+                <input type="text" id="terminal-input" placeholder="try typing 'skills' or 'roi'..." style="background: transparent; border: none; color: #00FF66; font-family: monospace; font-size: 0.8rem; outline: none; width: 100%;" onkeydown="handleTerminal(event)">
             </div>
         </div>
 
