@@ -35,6 +35,7 @@
         .tech-tag { display: inline-block; background: var(--secondary); border: 1.5px solid var(--border); color: var(--text); padding: 2px 8px; border-radius: 0px; font-size: 0.7rem; font-family: monospace; margin-right: 4px; margin-bottom: 4px; }
         .portfolio-link { color: var(--white); text-decoration: none; border-bottom: 1px dotted var(--border); font-weight: 500; }
         .portfolio-link:hover { color: var(--accent); border-bottom: 1px solid var(--border); }
+        .data-viz-box { background: var(--secondary); border: 1.5px solid var(--border); padding: 10px; margin: 12px 0; font-family: monospace; font-size: 0.75rem; }
         .terminal-box { background: var(--white); color: #00FF66; padding: 20px; font-family: monospace; border: 2px solid var(--border); max-width: 960px; margin: 40px auto 0 auto; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); text-align: left; }
         footer { text-align: center; padding: 40px; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border-top: 2px solid var(--border); margin-top: 60px; background: var(--secondary); }
     </style>
@@ -102,6 +103,18 @@
             <div class="project-card">
                 <h3><a href="Patient Data Cleanup & Quality Tool.html">Patient Data Cleanup & Quality Tool</a></h3>
                 <p>Automated hospital record remediation and MICE/KNN imputation pipeline ensuring audit-ready medical reporting.</p>
+                
+                <!-- Data Visualization Telemetry -->
+                <div class="data-viz-box">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>Data Integrity Improvement</span>
+                        <strong style="color: var(--white);">+25% Quality Boost</strong>
+                    </div>
+                    <div style="background: #e0e0e0; height: 6px; width: 100%; border: 1px solid var(--border);">
+                        <div style="background: var(--white); height: 100%; width: 75%;"></div>
+                    </div>
+                </div>
+
                 <div style="font-size: 0.75rem; font-weight: bold; color: var(--white); margin-bottom: 8px;">Result: 25% Boost in Data Quality</div>
                 <div>
                     <span class="tech-tag">Python</span>
@@ -124,10 +137,22 @@
             <div class="project-card">
                 <h3><a href="Customer Feedback Sentiment Analyzer.html">Customer Feedback Sentiment Analyzer</a></h3>
                 <p>Advanced natural language processing pipeline leveraging neural networks to score brand perception and surface satisfaction shifts.</p>
+                
+                <!-- Data Visualization Telemetry -->
+                <div class="data-viz-box">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                        <span>Model F1 Score Accuracy</span>
+                        <strong style="color: var(--white);">88% Accuracy</strong>
+                    </div>
+                    <div style="background: #e0e0e0; height: 6px; width: 100%; border: 1px solid var(--border);">
+                        <div style="background: var(--white); height: 100%; width: 88%;"></div>
+                    </div>
+                </div>
+
                 <div style="font-size: 0.75rem; font-weight: bold; color: var(--white); margin-bottom: 8px;">Result: 88% NLP F1 Score Accuracy</div>
                 <div>
                     <span class="tech-tag">Generative AI</span>
-                    <span class="tech-tag">Neural Network Microservices</span>
+                    <span class="tech-tag">Neural Networks</span>
                     <span class="tech-tag">TensorFlow</span>
                 </div>
             </div>
@@ -146,6 +171,19 @@
             <div class="project-card">
                 <h3><a href="Sales Forecast Engine.html">Sales Forecast Engine</a></h3>
                 <p>Time-series forecasting model utilizing Prophet to predict retail demand patterns, optimizing inventory and staffing.</p>
+                
+                <!-- SVG Mini Trendline Visualization -->
+                <div class="data-viz-box">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                        <span>Time-Series Forecast Trend</span>
+                        <strong style="color: var(--white);">Prophet ML</strong>
+                    </div>
+                    <svg viewBox="0 0 240 35" style="width: 100%; height: 32px; display: block;">
+                        <path d="M 0 28 Q 60 18 120 22 T 240 6" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+                        <circle cx="240" cy="6" r="3" fill="#0A0A0A"/>
+                    </svg>
+                </div>
+
                 <div style="font-size: 0.75rem; font-weight: bold; color: var(--white); margin-bottom: 8px;">Result: Minimized Inventory Shrinkage</div>
                 <div>
                     <span class="tech-tag">Python</span>
