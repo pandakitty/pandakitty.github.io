@@ -38,6 +38,28 @@
         .data-viz-box { background: var(--secondary); border: 1.5px solid var(--border); padding: 10px; margin: 12px 0; font-family: monospace; font-size: 0.75rem; }
         .terminal-box { background: var(--white); color: #00FF66; padding: 20px; font-family: monospace; border: 2px solid var(--border); max-width: 960px; margin: 40px auto 0 auto; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); text-align: left; }
         footer { text-align: center; padding: 40px; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; border-top: 2px solid var(--border); margin-top: 60px; background: var(--secondary); }
+
+        /* PDF Print Optimization */
+        @media print {
+            nav, footer, .terminal-box {
+                display: none !important;
+            }
+            body {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+            }
+            .project-card {
+                break-inside: avoid;
+                box-shadow: none !important;
+                border: 1px solid #000 !important;
+                margin-bottom: 15px;
+            }
+            .container {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 10px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -230,7 +252,6 @@
             </div>
             <div style="display: flex; align-items: center; gap: 6px;">
                 <span style="color: #00FF66; font-size: 0.8rem;">guest@ashley-love:~$</span>
-                <!-- FIXED INPUT TEXT COLOR TO HIGH-CONTRAST NEON GREEN -->
                 <input type="text" id="terminal-input" placeholder="try typing 'skills' or 'roi'..." style="background: transparent; border: none; color: #00FF66; font-family: monospace; font-size: 0.8rem; outline: none; width: 100%;" onkeydown="handleTerminal(event)">
             </div>
         </div>
