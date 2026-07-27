@@ -6,46 +6,46 @@
     <title>Technical Development | Ashley Love</title>
     <style>
         :root { 
-            --primary: #0A0A0A; 
-            --secondary: #121212; 
-            --accent: #C0C0C0; 
-            --bg: #0A0A0A; 
-            --text: #E0E0E0; 
-            --muted: #888888;
-            --white: #FFFFFF; 
-            --border: #2A2A2A;
+            --primary: #FAFAFA; 
+            --secondary: #F0F0F0; 
+            --accent: #555555; 
+            --bg: #FAFAFA; 
+            --text: #333333; 
+            --muted: #666666;
+            --white: #0A0A0A; 
+            --border: #0A0A0A;
         }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
         
-        nav { background: var(--secondary); border-bottom: 1px solid var(--border); padding: 1.2rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text); transition: color 0.2s; }
+        nav { background: var(--secondary); border-bottom: 2px solid var(--border); padding: 1.2rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text); transition: color 0.2s; }
         nav a:hover { color: var(--white); }
 
-        header { background: var(--secondary); border-bottom: 1px solid var(--border); color: var(--white); padding: 60px 20px; text-align: center; }
-        header h1 { font-size: 2rem; letter-spacing: 0.1em; font-weight: 800; margin: 0 0 10px 0; }
+        header { background: var(--secondary); border-bottom: 2px solid var(--border); color: var(--white); padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 2rem; letter-spacing: 0.15em; font-weight: 800; margin: 0 0 10px 0; text-transform: uppercase; }
         header p { color: var(--muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.25em; margin: 0; }
         
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2.5fr; gap: 40px; align-items: start; flex: 1; }
-        .profile-card { background: var(--secondary); border: 1px solid var(--border); padding: 25px; border-radius: 2px; text-align: center; position: sticky; top: 100px; }
-        .profile-img-large { width: 100%; border-radius: 2px; margin-bottom: 15px; display: block; object-fit: cover; border: 1px solid var(--border); filter: grayscale(20%); }
-        .profile-card h3 { color: var(--white); margin: 10px 0 5px 0; font-size: 1.1rem; letter-spacing: 0.05em; }
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2.5fr; gap: 40px; align-items: start; flex: 1; }
+        .profile-card { background: var(--primary); border: 2px solid var(--border); padding: 25px; border-radius: 0px; text-align: center; position: sticky; top: 100px; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); }
+        .profile-img-large { width: 100%; border-radius: 0px; margin-bottom: 15px; display: block; object-fit: cover; border: 2px solid var(--border); filter: grayscale(20%); }
+        .profile-card h3 { color: var(--white); margin: 10px 0 5px 0; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; }
         
-        .content h2 { color: var(--white); font-size: 1.25rem; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 0; margin-bottom: 25px; }
+        .content h2 { color: var(--white); font-size: 1.25rem; letter-spacing: 0.1em; border-bottom: 2px solid var(--border); padding-bottom: 10px; margin-top: 0; margin-bottom: 30px; text-transform: uppercase; }
         .project-list { margin-top: 30px; }
-        .project-item { background: var(--secondary); border: 1px solid var(--border); padding: 25px; border-radius: 2px; margin-bottom: 20px; transition: border-color 0.2s; }
-        .project-item:hover { border-color: var(--accent); }
-        .project-item h3 { margin-top: 0; color: var(--white); font-size: 1.1rem; letter-spacing: 0.05em; }
+        .project-item { background: var(--primary); border: 2px solid var(--border); padding: 25px; border-radius: 0px; margin-bottom: 25px; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); transition: transform 0.2s, box-shadow 0.2s; }
+        .project-item:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px 0px rgba(10,10,10,1); }
+        .project-item h3 { margin-top: 0; color: var(--white); font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; }
         .project-item p { color: var(--text); font-size: 0.9rem; margin-bottom: 15px; }
         .tech-stack { display: flex; gap: 6px; margin: 15px 0; flex-wrap: wrap; }
-        .badge { background: #161616; border: 1px solid var(--border); color: var(--text); padding: 2px 8px; border-radius: 2px; font-size: 0.7rem; font-family: monospace; }
-        .project-link { font-size: 0.8rem; color: var(--white); text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px dotted var(--accent); }
-        .project-link:hover { color: var(--accent); border-bottom: 1px solid var(--accent); }
+        .badge { background: var(--secondary); border: 1.5px solid var(--border); color: var(--text); padding: 3px 8px; border-radius: 0px; font-size: 0.7rem; font-family: monospace; letter-spacing: 0.05em; }
+        .project-link { font-size: 0.8rem; color: var(--white); text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 0.15em; border-bottom: 2px solid var(--border); }
+        .project-link:hover { color: var(--accent); border-bottom: 2px solid var(--accent); }
 
-        .contact-info { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; font-size: 0.95rem; }
-        .contact-info a { color: var(--white); text-decoration: none; font-weight: 600; border-bottom: 1px dotted var(--accent); }
+        .contact-info { margin-top: 48px; padding-top: 24px; border-top: 2px solid var(--border); text-align: center; font-size: 0.95rem; }
+        .contact-info a { color: var(--white); text-decoration: none; font-weight: 600; border-bottom: 2px solid var(--border); letter-spacing: 0.05em; }
         .contact-info a:hover { color: var(--accent); }
 
-        footer { background: var(--secondary); border-top: 1px solid var(--border); padding: 40px; text-align: center; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.05em; margin-top: 80px; }
+        footer { background: var(--secondary); border-top: 2px solid var(--border); padding: 40px; text-align: center; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 80px; }
     </style>
 </head>
 <body>
@@ -67,8 +67,8 @@
         <div class="profile-card">
             <img src="profile.png" alt="Ashley Love" class="profile-img-large">
             <h3>Ashley Love</h3>
-            <p style="font-size: 0.85rem; color: var(--muted); margin: 5px 0;">Rancho Palos Verdes, Los Angeles</p>
-            <p style="font-size: 0.85rem; color: var(--text);">Focus: Healthcare Quality, Data Integrity, & Business Solutions</p>
+            <p style="font-size: 0.85rem; color: var(--muted); margin: 5px 0; letter-spacing: 0.05em;">Rancho Palos Verdes, Los Angeles</p>
+            <p style="font-size: 0.85rem; color: var(--text); letter-spacing: 0.05em;">Focus: Healthcare Quality, Data Integrity, & Business Solutions</p>
         </div>
         
         <div class="content">
