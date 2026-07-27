@@ -6,33 +6,33 @@
     <title>Contact | Ashley Love</title>
     <style>
         :root { 
-            --primary: #0A0A0A; 
-            --secondary: #121212; 
-            --accent: #C0C0C0; 
-            --bg: #0A0A0A; 
-            --text: #E0E0E0; 
-            --muted: #888888;
-            --white: #FFFFFF; 
-            --border: #2A2A2A;
+            --primary: #FAFAFA; 
+            --secondary: #F0F0F0; 
+            --accent: #555555; 
+            --bg: #FAFAFA; 
+            --text: #333333; 
+            --muted: #666666;
+            --white: #0A0A0A; 
+            --border: #0A0A0A;
         }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
-        header { background: var(--secondary); border-bottom: 1px solid var(--border); color: var(--white); padding: 40px 20px; text-align: center; }
-        header h1 { letter-spacing: 0.1em; font-weight: 800; margin: 0; font-size: 1.8rem; }
-        nav { background: var(--secondary); border-bottom: 1px solid var(--border); padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text); transition: color 0.2s; }
+        header { background: var(--secondary); border-bottom: 2px solid var(--border); color: var(--white); padding: 40px 20px; text-align: center; }
+        header h1 { letter-spacing: 0.15em; font-weight: 800; margin: 0; font-size: 1.8rem; text-transform: uppercase; }
+        nav { background: var(--secondary); border-bottom: 2px solid var(--border); padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text); transition: color 0.2s; }
         nav a:hover { color: var(--white); }
-        .container { max-width: 600px; margin: 40px auto; padding: 40px; background: var(--secondary); border: 1px solid var(--border); border-radius: 4px; text-align: center; }
-        .container h2 { color: var(--white); letter-spacing: 0.05em; margin-top: 0; }
-        .container p { color: var(--muted); font-size: 0.95rem; }
+        .container { max-width: 600px; margin: 50px auto; padding: 40px; background: var(--primary); border: 2px solid var(--border); border-radius: 0px; text-align: center; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); }
+        .container h2 { color: var(--white); letter-spacing: 0.1em; margin-top: 0; text-transform: uppercase; font-size: 1.2rem; }
+        .container p { color: var(--muted); font-size: 0.9rem; letter-spacing: 0.05em; }
         
-        /* Button Styles */
-        .btn { display: inline-block; margin: 10px; padding: 12px 24px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 2px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; transition: background 0.2s, transform 0.2s; }
-        .btn:hover { background: var(--accent); transform: translateY(-1px); }
-        .btn-outline { background: transparent; border: 1px solid var(--accent); color: var(--white); }
-        .btn-outline:hover { background: var(--accent); color: var(--primary); }
+        /* Hard-edged Obsidian Button Styles */
+        .btn { display: inline-block; margin: 10px; padding: 14px 24px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: 0px; border: 2px solid var(--border); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; transition: all 0.2s; }
+        .btn:hover { background: var(--accent); color: var(--primary); transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px rgba(10,10,10,1); }
+        .btn-outline { background: transparent; border: 2px solid var(--border); color: var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--primary); }
         
-        .button-stack { display: flex; flex-direction: column; gap: 12px; align-items: center; margin-top: 30px; }
-        .fixed-width { width: 260px; }
+        .button-stack { display: flex; flex-direction: column; gap: 14px; align-items: center; margin-top: 30px; }
+        .fixed-width { width: 280px; }
     </style>
 </head>
 <body>
@@ -58,12 +58,12 @@
             <a href="https://github.com/pandakitty" target="_blank" class="btn btn-outline fixed-width">💻 GitHub Portfolio</a>
         </div>
 
-        <p style="margin-top: 30px; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 20px; letter-spacing: 0.05em;">
+        <p style="margin-top: 35px; font-size: 0.8rem; color: var(--muted); border-top: 2px solid var(--border); padding-top: 20px; letter-spacing: 0.1em; text-transform: uppercase;">
             Direct Email: <strong style="color: var(--white);">ashelove6969@gmail.com</strong>
         </p>
     </div>
 
-    <footer style="text-align: center; padding: 40px; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.05em;">
+    <footer style="text-align: center; padding: 40px; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;">
         &copy; 2026 Ashley Love | Obsidian & Chrome Architecture
     </footer>
 </body>
