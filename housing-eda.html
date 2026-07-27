@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Housing EDA | Ashley Love</title>
+    <title>Property Value Estimator Deep Dive | Ashley Love</title>
     <style>
-        :root { --primary: #1a2a3a; --accent: #3498db; --bg: #f8fafc; --text: #2d3748; --white: #ffffff; }
+        :root { 
+            --primary: #FAFAFA; 
+            --secondary: #F0F0F0; 
+            --accent: #555555; 
+            --bg: #FAFAFA; 
+            --text: #333333; 
+            --muted: #666666;
+            --white: #0A0A0A; 
+            --border: #0A0A0A;
+        }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg); margin: 0; }
-        header { background: var(--primary); color: var(--white); padding: 40px 20px; text-align: center; }
-        nav { background: var(--white); padding: 1rem; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: var(--primary); }
-        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .highlight-box { background: #f1f5f9; border-left: 6px solid var(--accent); padding: 20px; margin: 20px 0; }
-        h2 { color: var(--primary); margin-top: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 5px; }
-        .tag { background: #e2e8f0; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 5px; }
+        header { background: var(--secondary); color: var(--white); padding: 50px 20px; text-align: center; border-bottom: 2px solid var(--border); }
+        header h1 { font-size: 1.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin: 0; }
+        nav { background: var(--secondary); padding: 1rem; text-align: center; border-bottom: 2px solid var(--border); }
+        nav a { margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text); }
+        nav a:hover { color: var(--white); }
+        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: var(--primary); border: 2px solid var(--border); border-radius: 0px; box-shadow: 4px 4px 0px 0px rgba(10,10,10,1); }
+        .highlight-box { background: var(--secondary); border: 2px solid var(--border); border-left: 6px solid var(--border); padding: 20px; margin: 20px 0; box-shadow: 2px 2px 0px 0px rgba(10,10,10,1); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid var(--border); }
+        th, td { padding: 12px; border: 1.5px solid var(--border); text-align: left; }
+        th { background: var(--secondary); font-family: monospace; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+        h2 { color: var(--white); margin-top: 30px; border-bottom: 2px solid var(--border); padding-bottom: 8px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 0.1em; }
+        .tag { background: var(--secondary); border: 1.5px solid var(--border); padding: 4px 10px; border-radius: 0px; font-size: 0.75rem; font-family: monospace; font-weight: 600; margin-right: 5px; }
     </style>
 </head>
 <body>
-    <header><h1>Housing Price Analysis (EDA)</h1></header>
+    <header><h1>Property Value Estimator</h1></header>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -26,27 +40,29 @@
     </nav>
     <div class="container">
         <div class="highlight-box">
-            <strong>Key Achievement:</strong> Analyzed 80+ features across 2,900+ data points to engineer the most significant predictors for predictive modeling.
+            <strong>Business Impact:</strong> Provided instant, data-driven property valuations and deep exploratory insights to help stakeholders accurately evaluate market opportunities and mitigate real estate investment risks.
         </div>
 
         <p>
             <span class="tag">Python</span>
-            <span class="tag">Seaborn</span>
-            <span class="tag">Statistical Exploration</span>
+            <span class="tag">Exploratory Data Analysis</span>
+            <span class="tag">Price Modeling</span>
+            <span class="tag">Real Estate Analytics</span>
         </p>
 
-        <h2>Exploratory Data Analysis</h2>
-        <p>Using Python, Seaborn, and Matplotlib, I performed deep statistical exploration on 80+ variables to identify the strongest predictors of real estate value.</p>
-
         <h2>The "What": Technical Methodology</h2>
-        <p>The methodology focused on identifying data patterns and cleaning potential noise. I utilized a **correlation heatmap** to visualize the relationship between variables like "Ground Living Area" and "Overall Quality" against the sale price. To ensure the reliability of future models, I addressed missing data through mean/mode imputation and treated skewed numerical distributions using **log transformations**. This process reduced the complexity of the dataset while preserving the variables with the highest predictive power.</p>
-
+        <p>Using Python, pandas, and statistical visualization frameworks, I performed rigorous **Exploratory Data Analysis (EDA)** on historical housing datasets. I engineered features around structural attributes, neighborhood metrics, and market trends, building regression-based predictive models to output reliable real-time property price estimates.</p>
         
+        <table>
+            <tr><th>Analysis Area</th><th>Key Insight</th></tr>
+            <tr><td>Feature Correlation</td><td>Square footage and location grading heavily dictate baseline pricing</td></tr>
+            <tr><td>Outlier Detection</td><td>Filtered anomalous market spikes to ensure valuation accuracy</td></tr>
+        </table>
 
-        <h2>The "Why": Data Science Impact</h2>
-        <p>In Data Science, model accuracy is entirely dependent on data quality. This project demonstrates my commitment to the "Zero-Discrepancy" mindset—I don't just "run models"; I investigate the data's story first. By performing a rigorous EDA, I prevent bias and ensure that the features selected for a machine learning pipeline are statistically significant. For a business, this means more accurate valuations and a deeper understanding of market drivers.</p>
+        <h2>The "Why": Business Value Impact</h2>
+        <p>In competitive property markets, manual appraisals are slow and prone to subjective bias. By automating valuation modeling through exploratory data analysis, buyers, sellers, and analysts can evaluate market pricing instantly and make objective, data-backed decisions.</p>
 
-        <a href="index.html" style="display: inline-block; margin-top: 30px; color: var(--accent); text-decoration: none; font-weight: bold;">← Back to Portfolio Dashboard</a>
+        <a href="projects.html" style="display: inline-block; margin-top: 30px; color: var(--white); text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 2px solid var(--border);">← Back to Portfolio</a>
     </div>
 </body>
 </html>
